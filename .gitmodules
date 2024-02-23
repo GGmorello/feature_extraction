@@ -1,0 +1,3 @@
+[submodule "require-solidity-parser"]
+	path = require-solidity-parser
+	url = https://github.com/GGmorello/require-solidity-parser.git
