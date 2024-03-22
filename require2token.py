@@ -39,9 +39,6 @@ def change_require_statements(file_path, result_folder, token):
         text = f.read()
         locations = parse(text)
 
-
-
-
     for i, location in enumerate(locations):
         # for every location replace the text at the given location with the token and write the new file to the result folderù
         start_line, start_column, end_line, end_column = location
@@ -57,6 +54,21 @@ def change_require_statements(file_path, result_folder, token):
             f.write('\n'.join(lines))
     return
 
+def change_require_statements_string(text, token):
+    locations = parse(text)
+    result = []
+    for i, location in enumerate(locations):
+        start_line, start_column, end_line, end_column = location
+        lines = text.split('\n')
+        if start_line == end_line:
+            lines[start_line - 1] = lines[start_line - 1][:start_column] + token + lines[start_line - 1][end_column + 1:]
+        else:
+            lines[start_line - 1] = lines[start_line - 1][:start_column] + token
+            lines[end_line - 1] = lines[end_line - 1][end_column + 1:]
+            del lines[start_line:end_line-1]
+        result.append('\n'.join(lines) + "\n")
+    return result
+
 
 def main():
     for f in tqdm(os.listdir("/Users/gabrielemorello/Code/FLAMES/feature_extraction/sources")):
@@ -65,3 +77,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
