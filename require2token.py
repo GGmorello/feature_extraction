@@ -12,10 +12,11 @@ class RequireVisitor(SolidityVisitor):
         self.locations = []
 
     def visitExpressionStatement(self, ctx:SolidityParser.ExpressionStatementContext):
-        if 'require' in  ctx.getText():
+        text = ctx.getText()
+        if 'require' in text:
             start = ctx.start
             stop = ctx.stop
-            self.locations.append((start.line, start.column, stop.line, stop.column))
+            self.locations.append((start.line, start.column, stop.line, stop.column, text))
 
 def parse(text):
     if not text:
@@ -58,7 +59,7 @@ def change_require_statements_string(text, token):
     locations = parse(text)
     result = []
     for i, location in enumerate(locations):
-        start_line, start_column, end_line, end_column = location
+        start_line, start_column, end_line, end_column, text = location
         lines = text.split('\n')
         if start_line == end_line:
             lines[start_line - 1] = lines[start_line - 1][:start_column] + token + lines[start_line - 1][end_column + 1:]
@@ -66,7 +67,8 @@ def change_require_statements_string(text, token):
             lines[start_line - 1] = lines[start_line - 1][:start_column] + token
             lines[end_line - 1] = lines[end_line - 1][end_column + 1:]
             del lines[start_line:end_line-1]
-        result.append('\n'.join(lines) + "\n")
+
+        result.append(('\n'.join(lines) + "\n", text))
     return result
 
 
