@@ -68,7 +68,7 @@ def change_require_statements_string(text, token):
             lines[end_line - 1] = lines[end_line - 1][end_column + 1:]
             del lines[start_line:end_line-1]
 
-        result.append(('\n'.join(lines) + "\n", text))
+        result.append(('\n'.join(lines) + "\n", text[8: -1]))
     return result
 
 
