@@ -572,7 +572,7 @@ contract Keep3rV1Oracle {
 
     function workForFree() public keeper {
         bool worked = _updateAll();
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
     function lastObservation(address pair) public view returns (Observation memory) {

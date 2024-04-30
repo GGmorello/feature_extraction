@@ -88,7 +88,7 @@ contract AniaLottery {
     }
 
     function createProject(uint projectId, string calldata projectName, uint raiseGoal, uint endDate, address contractAddress, address billingAddress, uint firstPayoutInPercent, uint256 tokenPrice) external onlyAdmin {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         Project memory newProject = Project(projectId, projectName, raiseGoal, endDate, contractAddress, billingAddress, firstPayoutInPercent, tokenPrice, false);
 

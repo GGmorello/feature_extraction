@@ -479,7 +479,7 @@ contract Keep3rV1Oracle {
 
     modifier upkeep() {
         uint _gasUsed = gasleft();
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
         uint _received = KP3R.KPRH().getQuoteLimit(_gasUsed.sub(gasleft()));
         KP3R.receipt(address(KP3R), address(this), _received);

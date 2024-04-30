@@ -977,7 +977,7 @@ contract ve is IERC721, IERC721Metadata {
         require(attachments[_from] == 0 && !voted[_from], "attached");
         require(_from != _to);
         require(_isApprovedOrOwner(msg.sender, _from));
-        <REQUIRE>
+        require(<FILL_ME>)
 
         LockedBalance memory _locked0 = locked[_from];
         LockedBalance memory _locked1 = locked[_to];

@@ -1021,7 +1021,7 @@ contract ve is IERC721, IERC721Metadata {
         uint unlock_time = (block.timestamp + _lock_duration) / WEEK * WEEK; // Locktime is rounded down to weeks
 
         require(_value > 0); // dev: need non-zero value
-        <REQUIRE>
+        require(<FILL_ME>)
         require(unlock_time <= block.timestamp + MAXTIME, 'Voting lock can be 4 years max');
 
         ++tokenId;

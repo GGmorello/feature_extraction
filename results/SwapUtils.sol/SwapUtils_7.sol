@@ -577,7 +577,7 @@ library SwapUtils {
 
         // invariant after change
         uint256 D1 = getD(_xp(self, newBalances), getA(self));
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // updated to reflect fees and calculate the user's LP tokens
         uint256 D2 = D1;

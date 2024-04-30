@@ -1332,7 +1332,7 @@ contract ve is IERC721, IERC721Metadata {
     }
 
     function _burn(uint _tokenId) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         address owner = ownerOf(_tokenId);
 

@@ -661,7 +661,7 @@ contract Keep3rV1Oracle {
 
     function quote(address tokenIn, uint amountIn, address tokenOut, uint granularity) external view returns (uint amountOut) {
         address pair = UniswapV2Library.pairFor(factory, tokenIn, tokenOut);
-        <REQUIRE>
+        require(<FILL_ME>)
         (address token0,) = UniswapV2Library.sortTokens(tokenIn, tokenOut);
 
         uint priceAverageCumulative = 0;

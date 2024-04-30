@@ -623,7 +623,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
         // Get the TKN licenceAddress from ENS
         address licenceAddress = _ensResolve(_licenceNode);
         if (_asset != address(0)) {
-            <REQUIRE>
+            require(<FILL_ME>)
             ILicence(licenceAddress).load(_asset, _amount);
         } else {
             ILicence(licenceAddress).load.value(_amount)(_asset, _amount);

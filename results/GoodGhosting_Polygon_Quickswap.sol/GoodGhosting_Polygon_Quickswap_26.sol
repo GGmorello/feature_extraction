@@ -527,7 +527,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             redeemFromExternalPool(_slippage);
         }
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
     }
 

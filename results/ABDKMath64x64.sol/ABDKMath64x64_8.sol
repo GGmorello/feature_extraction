@@ -181,7 +181,7 @@ library ABDKMath64x64 {
                 }
                 uint256 absoluteResult = mulu(x, uint256(y));
                 if (negativeResult) {
-                    <REQUIRE>
+                    require(<FILL_ME>)
                     return -int256(absoluteResult); // We rely on overflow behavior here
                 } else {
                     require(absoluteResult <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);

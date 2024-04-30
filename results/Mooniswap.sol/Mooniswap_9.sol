@@ -206,7 +206,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
             uint256 value = preBalance.mul(amount).div(totalSupply);
             token.uniTransfer(target, value);
             withdrawnAmounts[i] = value;
-            <REQUIRE>
+            require(<FILL_ME>)
 
             virtualBalancesForAddition[token].scale(_decayPeriod, preBalance, totalSupply.sub(amount), totalSupply);
             virtualBalancesForRemoval[token].scale(_decayPeriod, preBalance, totalSupply.sub(amount), totalSupply);

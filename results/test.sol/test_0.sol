@@ -763,7 +763,7 @@ contract test {
 
 contract Sharer {
     function sendHalf(address payable addr) public payable returns (uint balance) {
-        <REQUIRE>
+        require(<FILL_ME>)
         uint balanceBeforeTransfer = address(this).balance;
         addr.transfer(msg.value / 2);
         // Since transfer throws an exception on failure and

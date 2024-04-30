@@ -602,7 +602,7 @@ contract WaultSwapFactory is IWaultSwapFactory {
   }
 
   function createPair(address tokenA, address tokenB) external returns (address pair) {
-    <REQUIRE>
+    require(<FILL_ME>)
     (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
     require(token0 != address(0), "WaultSwap: ZERO_ADDRESS");
     require(getPair[token0][token1] == address(0), "WaultSwap: PAIR_EXISTS"); // single check is sufficient

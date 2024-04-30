@@ -706,7 +706,7 @@ library SwapUtils {
         .mul(FEE_DENOMINATOR.sub(calculateCurrentWithdrawFee(self, msg.sender)))
         .div(FEE_DENOMINATOR);
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         self.balances[tokenIndex] = self.balances[tokenIndex].sub(
             dy.add(dyFee.mul(self.adminFee).div(FEE_DENOMINATOR))

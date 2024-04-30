@@ -464,7 +464,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
                 now.add(1200)
             );
             require(amountA > 0, "mtoken amount is 0");
-            <REQUIRE>
+            require(<FILL_ME>)
             // swapping the matoken for mtoken
             inversePairTokens[0] = address(matoken);
 

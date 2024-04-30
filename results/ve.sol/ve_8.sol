@@ -959,7 +959,7 @@ contract ve is IERC721, IERC721Metadata {
     }
 
     function abstain(uint _tokenId) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         voted[_tokenId] = false;
     }
 

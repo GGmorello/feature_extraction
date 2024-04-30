@@ -427,7 +427,7 @@ contract LoadLimit is ControllableOwnable, DailyLimitTrait {
     /// @dev Sets a daily card load limit.
     /// @param _amount is the card load amount in current stablecoin base units.
     function setLoadLimit(uint _amount) external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _setLimit(_loadLimit, _amount);
         emit SetLoadLimit(msg.sender, _amount);
     }

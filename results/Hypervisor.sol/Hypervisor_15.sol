@@ -300,7 +300,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
           _limitUpper != _baseUpper ||
           _limitLower != _baseLower
         );
-        <REQUIRE>
+        require(<FILL_ME>)
 
         /// update fees
         (uint128 baseLiquidity, uint128 limitLiquidity) = zeroBurn();

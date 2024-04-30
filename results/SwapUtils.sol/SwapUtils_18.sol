@@ -798,7 +798,7 @@ library SwapUtils {
      * @param newAdminFee new admin fee to be applied on future transactions
      */
     function setAdminFee(Swap storage self, uint256 newAdminFee) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         self.adminFee = newAdminFee;
     }
 

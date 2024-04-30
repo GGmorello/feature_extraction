@@ -558,7 +558,7 @@ contract MultiSigWallet {
         validRequirement(owners.length, _required)
     {
         required = _required;
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
     /// @dev Allows an owner to submit and confirm a transaction.

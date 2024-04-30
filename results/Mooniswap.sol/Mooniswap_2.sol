@@ -92,7 +92,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
     {
         require(bytes(name).length > 0, "Mooniswap: name is empty");
         require(bytes(symbol).length > 0, "Mooniswap: symbol is empty");
-        <REQUIRE>
+        require(<FILL_ME>)
         token0 = _token0;
         token1 = _token1;
     }

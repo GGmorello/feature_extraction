@@ -378,7 +378,7 @@ library UniswapV2Library {
     // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset
     function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {
         require(amountA > 0, 'UniswapV2Library: INSUFFICIENT_AMOUNT');
-        <REQUIRE>
+        require(<FILL_ME>)
         // SWC-Integer Overflow and Underflow: L383
         amountB = amountA.mul(reserveB) / reserveA;
     }

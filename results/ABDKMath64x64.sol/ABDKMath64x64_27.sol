@@ -446,7 +446,7 @@ library ABDKMath64x64 {
                     y >>= 1;
                 }
 
-                <REQUIRE>
+                require(<FILL_ME>)
                 absResult >>= 64 - resultShift;
             }
             int256 result = negative ? -int256(absResult) : int256(absResult);

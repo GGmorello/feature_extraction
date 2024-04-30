@@ -153,7 +153,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
 
         bytes memory jsonPrefix = new bytes(7);
         copyBytes(abi.encodePacked(_json), 0, 7, jsonPrefix, 0);
-        <REQUIRE>
+        require(<FILL_ME>)
 
         strings.slice memory body = _json.toSlice();
         body.split(":".toSlice());

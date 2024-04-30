@@ -624,7 +624,7 @@ contract WaultSwapFactory is IWaultSwapFactory {
   }
 
   function setFeeToSetter(address _feeToSetter) external {
-    <REQUIRE>
+    require(<FILL_ME>)
     feeToSetter = _feeToSetter;
   }
 }

@@ -336,7 +336,7 @@ library SafeMath {
 
         // Solidity only automatically asserts when dividing by 0
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 c = a / b;
 

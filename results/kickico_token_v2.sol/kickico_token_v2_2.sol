@@ -84,7 +84,7 @@ contract KickToken is AccountFrozenBalances {
     }
 
     modifier whenBurn() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

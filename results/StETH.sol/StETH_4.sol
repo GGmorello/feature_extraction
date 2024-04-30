@@ -352,7 +352,7 @@ contract StETH is IERC20, Pausable {
      * - the contract must not be paused.
      */
     function _transferShares(address _sender, address _recipient, uint256 _sharesAmount) internal whenNotStopped {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_recipient != address(0), "TRANSFER_TO_THE_ZERO_ADDRESS");
 
         uint256 currentSenderShares = shares[_sender];

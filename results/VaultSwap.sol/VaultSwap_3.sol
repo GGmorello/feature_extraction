@@ -277,7 +277,7 @@ contract WaultSwapERC20 is IWaultSwapERC20 {
     bytes32 r,
     bytes32 s
   ) external {
-    <REQUIRE>
+    require(<FILL_ME>)
     bytes32 digest =
       keccak256(
         abi.encodePacked(

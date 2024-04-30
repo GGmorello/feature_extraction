@@ -124,7 +124,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @param _hash is the hash of the pending whitelist array, a form of lamport lock
     function confirmWhitelistAddition(bytes32 _hash) external onlyController {
         // Require that the whitelist addition has been submitted.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Require that confirmation hash and the hash of the pending whitelist addition match
         require(_hash == calculateHash(_pendingWhitelistAddition), "hash of the pending whitelist addition do not match");
         // Whitelist pending addresses.

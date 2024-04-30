@@ -303,7 +303,7 @@ contract KickToken is AccountFrozenBalances {
     event FrozenTransfer(address indexed from, address indexed to, uint256 value);
 
     function _freeze(address account, uint256 amount) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(amount > 0, "ERC20: freeze from the address: amount should be > 0");
 
         _balances[account] = _balances[account].sub(amount);

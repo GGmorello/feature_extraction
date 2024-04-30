@@ -157,7 +157,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         _mint(to, shares);
         emit Deposit(from, to, shares, deposit0, deposit1);
         /// Check total supply cap not exceeded. A value of 0 means no limit.
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
     /// @notice Update fees of the positions

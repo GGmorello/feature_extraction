@@ -356,7 +356,7 @@ contract StETH is IERC20, Pausable {
         require(_recipient != address(0), "TRANSFER_TO_THE_ZERO_ADDRESS");
 
         uint256 currentSenderShares = shares[_sender];
-        <REQUIRE>
+        require(<FILL_ME>)
 
         shares[_sender] = currentSenderShares.sub(_sharesAmount);
         shares[_recipient] = shares[_recipient].add(_sharesAmount);

@@ -728,7 +728,7 @@ contract ve is IERC721, IERC721Metadata {
         // Throws if `_tokenId` is not a valid NFT
         require(owner != address(0));
         // Throws if `_approved` is the current owner
-        <REQUIRE>
+        require(<FILL_ME>)
         // Check requirements
         bool senderIsOwner = (idToOwner[_tokenId] == msg.sender);
         bool senderIsApprovedForAll = (ownerToOperators[owner])[msg.sender];

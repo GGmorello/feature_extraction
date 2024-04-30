@@ -73,7 +73,7 @@ contract AddressWhitelist is ControllableOwnable {
 
     /// @dev Check that neither addition nor removal operations have already been submitted.
     modifier noActiveSubmission() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

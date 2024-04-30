@@ -110,7 +110,7 @@ contract AddressWhitelist is ControllableOwnable {
         // Require that the whitelist has been initialized.
         require(isSetWhitelist, "whitelist has not been initialized");
         // Require this array of addresses not empty
-        <REQUIRE>
+        require(<FILL_ME>)
         // Set the provided addresses to the pending addition addresses.
         _pendingWhitelistAddition = _addresses;
         // Flag the operation as submitted.

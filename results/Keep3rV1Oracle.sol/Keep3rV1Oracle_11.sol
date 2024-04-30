@@ -354,7 +354,7 @@ library UniswapV2Library {
     function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
     // calculates the CREATE2 address for a pair without making any external calls

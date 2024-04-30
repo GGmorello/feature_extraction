@@ -184,7 +184,7 @@ contract AniaLottery {
         require(_checkProjectExistById(projectId), "Project with this ID does not exist.");
         require(!_checkOpenProject(projectId), "Project is open and should be closed.");
         // We will check if the lottery is open
-        <REQUIRE>
+        require(<FILL_ME>)
 
         for (uint i; i < users.length; i++) {
             address user = users[i];

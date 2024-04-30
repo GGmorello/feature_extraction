@@ -91,7 +91,7 @@ contract KickToken is AccountFrozenBalances {
 
     modifier canTransfer() {
         if(paused){
-            <REQUIRE>
+            require(<FILL_ME>)
         }
         _;
     }

@@ -605,7 +605,7 @@ contract WaultSwapFactory is IWaultSwapFactory {
     require(tokenA != tokenB, "WaultSwap: IDENTICAL_ADDRESSES");
     (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
     require(token0 != address(0), "WaultSwap: ZERO_ADDRESS");
-    <REQUIRE> // single check is sufficient
+    require(<FILL_ME>) // single check is sufficient
     bytes memory bytecode = type(WaultSwapPair).creationCode;
     bytes32 salt = keccak256(abi.encodePacked(token0, token1));
     assembly {

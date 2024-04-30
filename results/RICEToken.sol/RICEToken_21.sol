@@ -880,7 +880,7 @@ contract Ownable is Context {
      * @dev Transfers ownership of the contract to a new account (`newOwner`).
      */
     function _transferOwnership(address newOwner) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         emit OwnershipTransferred(_owner, newOwner);
         _owner = newOwner;
     }

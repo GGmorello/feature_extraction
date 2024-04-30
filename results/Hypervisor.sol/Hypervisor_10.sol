@@ -232,7 +232,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         uint256[4] memory minAmounts
     ) nonReentrant external returns (uint256 amount0, uint256 amount1) {
         require(shares > 0, "shares");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         /// update fees
         zeroBurn();

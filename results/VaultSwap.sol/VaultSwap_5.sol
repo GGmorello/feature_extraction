@@ -387,7 +387,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
 
   uint256 private unlocked = 1;
   modifier lock() {
-    <REQUIRE>
+    require(<FILL_ME>)
     unlocked = 0;
     _;
     unlocked = 1;

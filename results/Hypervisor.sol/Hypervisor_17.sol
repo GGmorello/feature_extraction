@@ -483,7 +483,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         if (liquidity > 0) {
             /// Burn liquidity
             (uint256 owed0, uint256 owed1) = pool.burn(tickLower, tickUpper, liquidity);
-            <REQUIRE>
+            require(<FILL_ME>)
 
             // Collect amount owed
             uint128 collect0 = collectAll ? type(uint128).max : _uint128Safe(owed0);

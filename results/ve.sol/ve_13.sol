@@ -976,7 +976,7 @@ contract ve is IERC721, IERC721Metadata {
     function merge(uint _from, uint _to) external {
         require(attachments[_from] == 0 && !voted[_from], "attached");
         require(_from != _to);
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_isApprovedOrOwner(msg.sender, _to));
 
         LockedBalance memory _locked0 = locked[_from];

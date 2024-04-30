@@ -327,7 +327,7 @@ contract AniaLottery {
 
         // We'll check to see if there are enough tokens to pay out in contract account
         require(tokensToBuy > 0, "Insufficient tokens to send");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // We will get the winner and check if there is still reward available
         LotteryWinner memory winner = getLotteryWinner(projectId, msg.sender);

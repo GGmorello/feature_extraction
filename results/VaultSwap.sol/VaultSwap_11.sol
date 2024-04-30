@@ -537,7 +537,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
     address to,
     bytes calldata data
   ) external lock {
-    <REQUIRE>
+    require(<FILL_ME>)
     (uint112 _reserve0, uint112 _reserve1, ) = getReserves(); // gas savings
     require(amount0Out < _reserve0 && amount1Out < _reserve1, "WaultSwap: INSUFFICIENT_LIQUIDITY");
 

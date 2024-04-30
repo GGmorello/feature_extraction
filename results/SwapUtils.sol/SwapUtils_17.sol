@@ -763,7 +763,7 @@ library SwapUtils {
             .mul(FEE_DENOMINATOR)
             .div(FEE_DENOMINATOR.sub(calculateCurrentWithdrawFee(self, msg.sender)));
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         self.lpToken.burnFrom(msg.sender, tokenAmount);

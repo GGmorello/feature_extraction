@@ -149,7 +149,7 @@ contract AddressWhitelist is ControllableOwnable {
         // Check if operation has been submitted.
         require(submittedWhitelistAddition, "whitelist addition has not been submitted");
         // Require that confirmation hash and the hash of the pending whitelist addition match
-        <REQUIRE>
+        require(<FILL_ME>)
         // Reset pending addresses.
         delete _pendingWhitelistAddition;
         // Reset the submitted operation flag.

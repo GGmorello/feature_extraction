@@ -964,7 +964,7 @@ contract RICEToken is ERC20, ERC20Detailed, ERC20Capped, ERC20Pausable, ERC20Bur
     }
 //SWC-Incorrect Inheritance Order:L963,971
     function transferFrom(address _from, address _receiver, uint256 _amount) public returns (bool) {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_receiver != address(0));
         require(_amount <= allowance(_from, msg.sender));
         require(_amount <= getAvailableBalance(_from));

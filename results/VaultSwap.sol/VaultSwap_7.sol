@@ -434,7 +434,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
 
   // called once by the factory at time of deployment
   function initialize(address _token0, address _token1) external {
-    <REQUIRE> // sufficient check
+    require(<FILL_ME>) // sufficient check
     token0 = _token0;
     token1 = _token1;
   }

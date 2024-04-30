@@ -615,7 +615,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
     /// @param _amount is the amount of assets to be transferred in base units.
     function loadTokenCard(address _asset, uint _amount) external payable onlyOwner {
         //check if token is allowed to be used for loading the card
-        <REQUIRE>
+        require(<FILL_ME>)
         // Convert token amount to stablecoin value.
         uint stablecoinValue = convertToStablecoin(_asset, _amount);
         // Check against the daily spent limit and update accordingly, require that the value is under remaining limit.

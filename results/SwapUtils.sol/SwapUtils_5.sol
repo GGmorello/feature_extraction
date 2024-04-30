@@ -553,7 +553,7 @@ library SwapUtils {
     //SWC-Reentrancy: L554-L613
     function addLiquidity(Swap storage self, uint256[] calldata amounts, uint256 minToMint)
         external {
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         uint256[] memory fees = new uint256[](self.pooledTokens.length);

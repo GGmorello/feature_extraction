@@ -338,7 +338,7 @@ contract AniaLottery {
 
     function buy(uint projectId, uint pay, address tokenForPayContractAddress) external {
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // Payment must be greater than 0
         require(pay > 0, "You need to send some ether");

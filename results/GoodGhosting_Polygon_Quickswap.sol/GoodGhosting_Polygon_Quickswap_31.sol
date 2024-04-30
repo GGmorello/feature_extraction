@@ -564,7 +564,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         );
 
         // check player has made payments up to the previous segment
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         // check if this is deposit for the last segment

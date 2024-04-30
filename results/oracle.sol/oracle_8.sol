@@ -322,7 +322,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         require(day > 0 && day < 32, "day error");
 
         uint month = _monthToNumber(date.split(dateDelimiter).toString());
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint year = _parseIntScientific(date.split(dateDelimiter).toString());
         require(year > 2017 && year < 3000, "year error");

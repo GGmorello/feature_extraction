@@ -166,7 +166,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
             uint256 fairSupplyCached = fairSupply;
 
             for (uint i = 0; i < maxAmounts.length; i++) {
-                <REQUIRE>
+                require(<FILL_ME>)
                 uint256 amount = realBalances[i].mul(fairSupplyCached).add(totalSupply - 1).div(totalSupply);
                 require(amount >= minAmounts[i], "Mooniswap: minAmount not reached");
 

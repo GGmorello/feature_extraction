@@ -247,7 +247,7 @@ contract KickToken is AccountFrozenBalances {
 
 
     function _burn(address account, uint256 value) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _totalSupply = _totalSupply.sub(value);
         _balances[account] = _balances[account].sub(value);

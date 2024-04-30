@@ -751,7 +751,7 @@ contract MultiSigWallet {
         external
         onlyWallet
     {
-        <REQUIRE>
+        require(<FILL_ME>)
         CoinCreation(new Gifto());
         flag = false;
     }

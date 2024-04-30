@@ -555,7 +555,7 @@ contract Keep3rV1Oracle {
     }
 
     function add(address tokenA, address tokenB) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
         require(!_known[pair], "known");
         _known[pair] = true;

@@ -286,7 +286,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         uint256[4] memory inMin, 
         uint256[4] memory outMin
     ) nonReentrant external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(
             _limitLower < _limitUpper &&

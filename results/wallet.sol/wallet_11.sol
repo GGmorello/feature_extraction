@@ -162,7 +162,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @param _addresses are the Ethereum addresses to be removed.
     function submitWhitelistRemoval(address[] _addresses) external onlyOwner noActiveSubmission {
         // Require that the whitelist has been initialized.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Require that the array of addresses is not empty
         require(_addresses.length > 0, "pending whitelist removal is empty");
         // Add the provided addresses to the pending addition list.

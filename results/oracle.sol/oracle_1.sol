@@ -121,7 +121,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         require(msg.sender == oraclize_cbAddress(), "sender is not oraclize");
         // Use the query ID to find the matching token address.
         address token = _queryToToken[_queryID];
-        <REQUIRE>
+        require(<FILL_ME>)
         // Get the corresponding token object.
         ( , , , bool available, , , uint256 lastUpdate) = _getTokenInfo(token);
         require(available, "token must be available");

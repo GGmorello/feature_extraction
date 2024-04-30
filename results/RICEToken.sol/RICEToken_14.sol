@@ -566,7 +566,7 @@ contract MinterRole is Context {
     }
 
     modifier onlyMinter() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

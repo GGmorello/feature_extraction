@@ -692,7 +692,7 @@ contract ERC20 is IERC20 {
 
         require(sender != address(0), "ERC20: transfer from the zero address");
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
 

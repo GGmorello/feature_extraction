@@ -257,7 +257,7 @@ contract DailyLimitTrait {
     /// @param _amount is the daily limit amount in base units.
     function _setLimit(DailyLimit storage dl, uint _amount) internal {
         // Require that the spend limit has not been set yet.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Modify spend limit based on the provided value.
         _modifyLimit(dl, _amount);
         // Flag the operation as set.

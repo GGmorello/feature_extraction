@@ -426,7 +426,7 @@ library ABDKMath64x64 {
 
                 uint256 resultShift = 0;
                 while (y != 0) {
-                    <REQUIRE>
+                    require(<FILL_ME>)
 
                     if (y & 0x1 != 0) {
                         absResult = (absResult * absX) >> 127;

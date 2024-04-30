@@ -539,7 +539,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             !players[msg.sender].withdrawn,
             "Player already withdraw from game"
         );
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         uint256 currentSegment = getCurrentSegment();

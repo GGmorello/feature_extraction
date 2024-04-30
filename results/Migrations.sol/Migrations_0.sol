@@ -6,7 +6,7 @@ contract Migrations {
   uint public last_completed_migration;
 
   modifier restricted() {
-    <REQUIRE>
+    require(<FILL_ME>)
  // Error: "This function is restricted to the contract's owner"
     _;
   }

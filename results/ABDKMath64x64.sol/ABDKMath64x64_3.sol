@@ -90,7 +90,7 @@ library ABDKMath64x64 {
     function from128x128(int256 x) internal pure returns (int128) {
         unchecked {
             int256 result = x >> 64;
-            <REQUIRE>
+            require(<FILL_ME>)
             return int128(result);
         }
     }

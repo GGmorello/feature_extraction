@@ -315,7 +315,7 @@ contract AniaLottery {
 
     function checkBuy(uint projectId, uint256 tokensToBuy) public view returns (bool) {
         // The project id is required
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_checkProjectExistById(projectId), "Project with this ID does not exist.");
 
         // Project info

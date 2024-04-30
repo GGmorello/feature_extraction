@@ -221,7 +221,7 @@ contract AniaLottery {
 
     function getProjectUser(uint projectId, address userAddress) public view returns (Whitelist memory) {
         uint256 index = projectUserIndex[projectId][userAddress];
-        <REQUIRE>
+        require(<FILL_ME>)
         return projectsWhitelist[projectId][index];
     }
 

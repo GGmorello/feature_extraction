@@ -958,7 +958,7 @@ contract RICEToken is ERC20, ERC20Detailed, ERC20Capped, ERC20Pausable, ERC20Bur
     }
 //SWC-Requirement Violation:L962, 969, 970, 975
     function transfer(address _receiver, uint256 _amount) public returns (bool success) {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_amount <= getAvailableBalance(msg.sender));
         return ERC20.transfer(_receiver, _amount);
     }

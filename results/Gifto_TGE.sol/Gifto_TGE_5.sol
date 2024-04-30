@@ -126,7 +126,7 @@ contract Gifto is ERC20Interface {
      * Functions with this modifier check the validity of range [a, b] <= [0, buyers.length-1]
      */
     modifier validRange(uint a, uint b){
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _;
     }

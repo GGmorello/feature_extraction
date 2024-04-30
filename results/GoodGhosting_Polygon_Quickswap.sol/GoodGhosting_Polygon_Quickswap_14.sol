@@ -320,7 +320,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             now.add(1200)
         );
         // this safety check is sufficient
-        <REQUIRE>
+        require(<FILL_ME>)
         // staking the lp tokens to earn $QUICK rewards
         uint256 lpTokenAmount = pair.balanceOf(address(this));
         // no return param here

@@ -266,7 +266,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         amount0 = base0.add(limit0).add(unusedAmount0);
         amount1 = base1.add(limit1).add(unusedAmount1);
 
-        <REQUIRE>
+        require(<FILL_ME>)
         _burn(from, shares);
 
         emit Withdraw(from, to, shares, amount0, amount1);

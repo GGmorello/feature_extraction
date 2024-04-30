@@ -529,7 +529,7 @@ library SwapUtils {
         uint256 minDy
     ) external {
         (uint256 dy, uint256 dyFee) = _calculateSwap(self, tokenIndexFrom, tokenIndexTo, dx);
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 dyAdminFee = dyFee.mul(self.adminFee).div(FEE_DENOMINATOR).div(self.tokenPrecisionMultipliers[tokenIndexTo]);
 

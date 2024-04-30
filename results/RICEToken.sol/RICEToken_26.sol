@@ -966,7 +966,7 @@ contract RICEToken is ERC20, ERC20Detailed, ERC20Capped, ERC20Pausable, ERC20Bur
     function transferFrom(address _from, address _receiver, uint256 _amount) public returns (bool) {
         require(_from != address(0));
         require(_receiver != address(0));
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_amount <= getAvailableBalance(_from));
         return ERC20.transferFrom(_from, _receiver, _amount);
     }

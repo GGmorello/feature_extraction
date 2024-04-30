@@ -182,7 +182,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
             }
         }
 
-        <REQUIRE>
+        require(<FILL_ME>)
         _mint(target, fairSupply);
 
         emit Deposited(msg.sender, target, fairSupply, receivedAmounts[0], receivedAmounts[1]);

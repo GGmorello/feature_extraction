@@ -88,7 +88,7 @@ contract Gifto is ERC20Interface {
      * Functions with this modifier can only be executed by users except owners
      */
     modifier onlyNotOwner() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

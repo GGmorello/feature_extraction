@@ -181,7 +181,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         // Interacting with the external contracts should be the last action in the logic to avoid re-entracy attacks.
         // Re-entrancy: https://solidity.readthedocs.io/en/v0.6.12/security-considerations.html#re-entrancy
         // Check-Effects-Interactions Pattern: https://solidity.readthedocs.io/en/v0.6.12/security-considerations.html#use-the-checks-effects-interactions-pattern
-        <REQUIRE>
+        require(<FILL_ME>)
 
     }
 

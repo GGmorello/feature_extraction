@@ -459,7 +459,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
                 liquidity,
                 abi.encode(payer)
             );
-            <REQUIRE>
+            require(<FILL_ME>)
         }
     }
 

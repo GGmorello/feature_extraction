@@ -338,7 +338,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     {
         Player storage player = players[msg.sender];
         // Makes sure player didn't withdraw; otherwise, player could withdraw multiple times.
-        <REQUIRE>
+        require(<FILL_ME>)
         player.withdrawn = true;
         // In an early withdraw, users get their principal minus the earlyWithdrawalFee % defined in the constructor.
         // So if earlyWithdrawalFee is 10% and deposit amount is 10 musdc, player will get 9 musdc back, keeping 1 dai in the pool.

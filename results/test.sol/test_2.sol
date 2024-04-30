@@ -855,7 +855,7 @@ contract C {
         ))));
 
         D d = new D{salt: salt}(arg);
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 }
 

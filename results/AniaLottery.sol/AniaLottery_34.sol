@@ -323,7 +323,7 @@ contract AniaLottery {
 
         // We will check how many tokens there are in the contract account
         uint256 availableTokens = anyoneTokenBalance(contractAddress, address(this));
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // We'll check to see if there are enough tokens to pay out in contract account
         require(tokensToBuy > 0, "Insufficient tokens to send");

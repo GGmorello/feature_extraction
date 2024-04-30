@@ -148,7 +148,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     */
     function updateStakingContract(IStake _stakingPool) external onlyOwner {
         require(address(_stakingPool) != address(0), "Invali Address");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         stakingPool.exit();
         stakingPool = _stakingPool;

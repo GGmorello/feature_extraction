@@ -261,7 +261,7 @@ contract AniaLottery {
         tierThree = _value;
     }
     function changeTierOneTicketValue(uint _value) external onlyAdmin {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_value > tierTwoTicketValue, "Tier Ticket value has to be more than Tier Two");
         require(_value > tierThreeTicketValue, "Tier Ticket value has to be more than Tier Three");
         tierOneTicketValue = _value;

@@ -181,7 +181,7 @@ contract AniaLottery {
     }
 
     function lotteryDraw(uint projectId, address[] calldata users) external onlyAdmin {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(!_checkOpenProject(projectId), "Project is open and should be closed.");
         // We will check if the lottery is open
         require(!projects[projectId].draw, "The lottery has been already drawn.");

@@ -164,7 +164,7 @@ library ABDKMath64x64 {
     function muli(int128 x, int256 y) internal pure returns (int256) {
         unchecked {
             if (x == MIN_64x64) {
-                <REQUIRE>
+                require(<FILL_ME>)
 
                 return -y << 63;
             } else {

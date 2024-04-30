@@ -949,7 +949,7 @@ contract ve is IERC721, IERC721Metadata {
     }
 
     function setVoter(address _voter) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         voter = _voter;
     }
 

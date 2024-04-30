@@ -351,7 +351,7 @@ library SwapUtils {
     ) internal view returns (uint256) {
         uint256 numTokens = self.pooledTokens.length;
         require(tokenIndexFrom != tokenIndexTo, "Can't compare token to itself");
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         uint256 _A = getA(self);

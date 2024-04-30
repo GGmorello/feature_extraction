@@ -128,7 +128,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             "Fail to approve allowance to router"
         );
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
     }
 

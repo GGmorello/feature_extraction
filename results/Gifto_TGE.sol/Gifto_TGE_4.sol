@@ -117,7 +117,7 @@ contract Gifto is ERC20Interface {
     // SWC-Presence of unused variables: L116 - L121
     modifier validValue(){
         // require value >= _minimumBuy AND total deposit of msg.sender <= maximumBuyPrice
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _;
     }

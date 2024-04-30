@@ -351,7 +351,7 @@ contract AniaLottery {
 
         address billingAddress = projects[projectId].billingAddress;
         address contractAddress = projects[projectId].contractAddress;
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // Create a token from a given contract address
         IERC20 token = IERC20(contractAddress);

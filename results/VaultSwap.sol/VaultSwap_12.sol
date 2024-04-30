@@ -539,7 +539,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
   ) external lock {
     require(amount0Out > 0 || amount1Out > 0, "WaultSwap: INSUFFICIENT_OUTPUT_AMOUNT");
     (uint112 _reserve0, uint112 _reserve1, ) = getReserves(); // gas savings
-    <REQUIRE>
+    require(<FILL_ME>)
 
     uint256 balance0;
     uint256 balance1;

@@ -316,7 +316,7 @@ contract AniaLottery {
     function checkBuy(uint projectId, uint256 tokensToBuy) public view returns (bool) {
         // The project id is required
         require(projectId > 0, "ProjectId must be selected");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // Project info
         address contractAddress = projects[projectId].contractAddress;

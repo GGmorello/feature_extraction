@@ -695,7 +695,7 @@ library SwapUtils {
     ) external {
         uint256 totalSupply = self.lpToken.totalSupply();
         uint256 numTokens = self.pooledTokens.length;
-        <REQUIRE>
+        require(<FILL_ME>)
         require(tokenIndex < numTokens, "Token not found");
 
         uint256 dyFee = 0;

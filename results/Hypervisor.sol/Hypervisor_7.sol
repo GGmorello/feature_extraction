@@ -112,7 +112,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         require(deposit0 > 0 || deposit1 > 0);
         require(deposit0 <= deposit0Max && deposit1 <= deposit1Max);
         require(to != address(0) && to != address(this), "to");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         /// update fees
         zeroBurn();

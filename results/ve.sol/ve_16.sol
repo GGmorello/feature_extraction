@@ -1008,7 +1008,7 @@ contract ve is IERC721, IERC721Metadata {
         LockedBalance memory _locked = locked[_tokenId];
 
         require(_value > 0); // dev: need non-zero value
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_locked.end > block.timestamp, 'Cannot add to expired lock. Withdraw');
         _deposit_for(_tokenId, _value, 0, _locked, DepositType.DEPOSIT_FOR_TYPE);
     }

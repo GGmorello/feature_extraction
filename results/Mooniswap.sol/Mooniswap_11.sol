@@ -252,7 +252,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
         src.uniTransferFrom(msg.sender, address(this), amount);
         confirmed = src.uniBalanceOf(address(this)).sub(balances.src);
         result = _getReturn(src, dst, confirmed, virtualBalances.src, virtualBalances.dst, fees.fee, fees.slippageFee);
-        <REQUIRE>
+        require(<FILL_ME>)
         dst.uniTransfer(receiver, result);
 
         // Update virtual balances to the same direction only at imbalanced state

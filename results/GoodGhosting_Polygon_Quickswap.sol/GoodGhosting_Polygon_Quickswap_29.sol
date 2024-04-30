@@ -552,7 +552,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         // segment happens on segment n-1 (penultimate segment).
         // Any segment greather than the last segment means the game is completed, and cannot
         // receive payments
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         //check if current segment is currently unpaid

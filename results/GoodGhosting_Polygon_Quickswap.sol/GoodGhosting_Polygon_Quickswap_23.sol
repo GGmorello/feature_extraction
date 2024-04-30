@@ -480,7 +480,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
                 address(this),
                 now.add(1200)
             );
-            <REQUIRE>
+            require(<FILL_ME>)
         }
         uint256 totalBalance = IERC20(mtoken).balanceOf(address(this));
         // recording principal amount separately since adai balance will have interest has well

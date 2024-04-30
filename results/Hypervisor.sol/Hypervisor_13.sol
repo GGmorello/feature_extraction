@@ -291,7 +291,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
                 _baseLower % tickSpacing == 0 &&
                 _baseUpper % tickSpacing == 0
         );
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(
           _limitUpper != _baseUpper ||

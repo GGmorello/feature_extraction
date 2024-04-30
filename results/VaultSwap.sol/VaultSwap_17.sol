@@ -604,7 +604,7 @@ contract WaultSwapFactory is IWaultSwapFactory {
   function createPair(address tokenA, address tokenB) external returns (address pair) {
     require(tokenA != tokenB, "WaultSwap: IDENTICAL_ADDRESSES");
     (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-    <REQUIRE>
+    require(<FILL_ME>)
     require(getPair[token0][token1] == address(0), "WaultSwap: PAIR_EXISTS"); // single check is sufficient
     bytes memory bytecode = type(WaultSwapPair).creationCode;
     bytes32 salt = keccak256(abi.encodePacked(token0, token1));

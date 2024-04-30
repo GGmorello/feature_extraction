@@ -531,7 +531,7 @@ library Roles {
      * @dev Give an account access to this role.
      */
     function add(Role storage role, address account) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         role.bearer[account] = true;
     }
 

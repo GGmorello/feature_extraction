@@ -780,7 +780,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
     // credit to https://ethereum.stackexchange.com/questions/51229/how-to-convert-bytes-to-uint-in-solidity
     // and Nick Johnson https://ethereum.stackexchange.com/questions/4170/how-to-convert-a-uint-to-bytes-in-solidity/4177#4177
     function _sliceUint(bytes _bts, uint _from) private pure returns (uint) {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint x;
         assembly {

@@ -389,7 +389,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
                 address(this),
                 now.add(1200)
             );
-            <REQUIRE>
+            require(<FILL_ME>)
             // after some liquidity is burnt if still the balance is low then only do a reverse swap
             if (
                 IERC20(mtoken).balanceOf(address(this)) <

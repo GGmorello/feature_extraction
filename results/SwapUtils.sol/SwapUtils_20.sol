@@ -817,7 +817,7 @@ library SwapUtils {
      * @param newWithdrawFee new withdraw fee to be applied
      */
     function setDefaultWithdrawFee(Swap storage self, uint256 newWithdrawFee) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         self.defaultWithdrawFee = newWithdrawFee;
     }
 }

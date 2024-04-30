@@ -1020,7 +1020,7 @@ contract ve is IERC721, IERC721Metadata {
     function _create_lock(uint _value, uint _lock_duration, address _to) internal returns (uint) {
         uint unlock_time = (block.timestamp + _lock_duration) / WEEK * WEEK; // Locktime is rounded down to weeks
 
-        <REQUIRE> // dev: need non-zero value
+        require(<FILL_ME>) // dev: need non-zero value
         require(unlock_time > block.timestamp, 'Can only lock until time in the future');
         require(unlock_time <= block.timestamp + MAXTIME, 'Voting lock can be 4 years max');
 

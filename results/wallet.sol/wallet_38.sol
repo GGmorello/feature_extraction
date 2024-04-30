@@ -701,7 +701,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
         ( ,uint256 stablecoinMagnitude, uint256 stablecoinRate, bool stablecoinAvailable, , , ) = _getStablecoinInfo();
             // Check if the stablecoin rate is set.
         require(stablecoinAvailable, "token is not available");
-        <REQUIRE>
+        require(<FILL_ME>)
         // Safely convert the token amount to stablecoin based on its exchange rate and the stablecoin exchange rate.
         // SWC-Integer Overflow and Underflow: L707
         return _amount.mul(stablecoinMagnitude).div(stablecoinRate);

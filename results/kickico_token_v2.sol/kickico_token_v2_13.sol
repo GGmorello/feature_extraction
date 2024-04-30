@@ -230,7 +230,7 @@ contract KickToken is AccountFrozenBalances {
 
 
     function _mint(address account, uint256 amount) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(account != address(this), "ERC20: mint to the contract address");
         require(amount > 0, "ERC20: mint amount should be > 0");
 

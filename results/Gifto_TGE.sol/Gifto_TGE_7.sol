@@ -281,7 +281,7 @@ contract Gifto is ERC20Interface {
         onlyOwner
         validRange(a, b) {
         // make sure balances owner greater than _icoSupply
-        <REQUIRE>
+        require(<FILL_ME>)
         for (uint i = a; i <= b; i++){
             if(approvedInvestorList[buyers[i]]){
                 // compute amount token of each buyer

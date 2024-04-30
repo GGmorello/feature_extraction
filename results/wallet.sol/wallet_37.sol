@@ -700,7 +700,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
         // Get the stablecoin's magnitude and its current rate.
         ( ,uint256 stablecoinMagnitude, uint256 stablecoinRate, bool stablecoinAvailable, , , ) = _getStablecoinInfo();
             // Check if the stablecoin rate is set.
-        <REQUIRE>
+        require(<FILL_ME>)
         require(stablecoinRate != 0, "stablecoin rate is 0");
         // Safely convert the token amount to stablecoin based on its exchange rate and the stablecoin exchange rate.
         // SWC-Integer Overflow and Underflow: L707

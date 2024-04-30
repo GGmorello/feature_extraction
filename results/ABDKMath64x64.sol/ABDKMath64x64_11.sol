@@ -208,7 +208,7 @@ library ABDKMath64x64 {
             uint256 lo = (uint256(int256(x)) * (y & 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)) >> 64;
             uint256 hi = uint256(int256(x)) * (y >> 128);
 
-            <REQUIRE>
+            require(<FILL_ME>)
             hi <<= 64;
 
             require(hi <= 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF - lo);

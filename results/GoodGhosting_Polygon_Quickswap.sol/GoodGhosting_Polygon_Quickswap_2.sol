@@ -119,7 +119,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         stakingPool = _stakingPool;
 
         uint256 MAX_ALLOWANCE = 2**256 - 1;
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(
             _matoken.approve(address(router), MAX_ALLOWANCE),

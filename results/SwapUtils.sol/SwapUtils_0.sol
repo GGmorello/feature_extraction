@@ -181,7 +181,7 @@ library SwapUtils {
     function getYD(uint256 _A, uint8 tokenIndex, uint256[] memory xp, uint256 D)
         internal pure returns (uint256) {
         uint256 numTokens = xp.length;
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 c = D;
         uint256 s = 0;

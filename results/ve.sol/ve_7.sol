@@ -954,7 +954,7 @@ contract ve is IERC721, IERC721Metadata {
     }
 
     function voting(uint _tokenId) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         voted[_tokenId] = true;
     }
 

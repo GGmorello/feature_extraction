@@ -617,7 +617,7 @@ contract ve is IERC721, IERC721Metadata {
         uint _tokenId,
         address _sender
     ) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         // Check requirements
         require(_isApprovedOrOwner(_sender, _tokenId));
         // Clear approval. Throws if `_from` is not the current owner

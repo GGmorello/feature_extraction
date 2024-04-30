@@ -76,7 +76,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     }
 
     modifier whenGameIsNotCompleted() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

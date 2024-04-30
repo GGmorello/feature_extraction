@@ -494,7 +494,7 @@ contract MultiSigWallet {
             isOwner[_owners[i]] = true;
         }
         owners = _owners;
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
     /// @dev Allows to add a new owner. Transaction has to be sent by wallet.

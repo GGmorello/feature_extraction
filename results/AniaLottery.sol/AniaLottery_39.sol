@@ -341,7 +341,7 @@ contract AniaLottery {
         require(stableCoins[tokenForPayContractAddress], "This Token is not available for payment");
 
         // Payment must be greater than 0
-        <REQUIRE>
+        require(<FILL_ME>)
         require(getUserTicketValue(msg.sender) == pay, "You need to pay the exact tier value before claiming the reward");
 
         uint256 tokensToBuy = decimals * (pay * decimals) / projects[projectId].tokenPrice * projects[projectId].firstPayoutInPercent / 100;

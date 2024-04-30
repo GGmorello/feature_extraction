@@ -410,7 +410,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
                     now.add(1200)
                 );
                 // since in path param we just have the 2 tokens hence checking the only element in the amounts array.
-                <REQUIRE>
+                require(<FILL_ME>)
             }
         }
         require(

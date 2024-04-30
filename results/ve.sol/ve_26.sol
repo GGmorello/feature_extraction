@@ -1072,7 +1072,7 @@ contract ve is IERC721, IERC721Metadata {
         require(_locked.end > block.timestamp, 'Lock expired');
         require(_locked.amount > 0, 'Nothing is locked');
         require(unlock_time > _locked.end, 'Can only increase lock duration');
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _deposit_for(_tokenId, 0, unlock_time, _locked, DepositType.INCREASE_UNLOCK_TIME);
     }

@@ -287,7 +287,7 @@ contract WaultSwapERC20 is IWaultSwapERC20 {
         )
       );
     address recoveredAddress = ecrecover(digest, v, r, s);
-    <REQUIRE>
+    require(<FILL_ME>)
     _approve(owner, spender, value);
   }
 }

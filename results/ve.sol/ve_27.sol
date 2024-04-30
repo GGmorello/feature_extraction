@@ -1081,7 +1081,7 @@ contract ve is IERC721, IERC721Metadata {
     /// @dev Only possible if the lock has expired
     function withdraw(uint _tokenId) external nonreentrant {
         assert(_isApprovedOrOwner(msg.sender, _tokenId));
-        <REQUIRE>
+        require(<FILL_ME>)
 
         LockedBalance memory _locked = locked[_tokenId];
         require(block.timestamp >= _locked.end, "The lock didn't expire");

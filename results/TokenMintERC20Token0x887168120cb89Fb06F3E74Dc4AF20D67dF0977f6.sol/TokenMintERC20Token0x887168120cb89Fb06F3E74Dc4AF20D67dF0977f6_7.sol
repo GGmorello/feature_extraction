@@ -726,7 +726,7 @@ contract ERC20 is IERC20 {
 
     function _mint(address account, uint256 amount) internal {
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
 

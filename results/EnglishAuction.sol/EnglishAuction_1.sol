@@ -5,7 +5,7 @@ contract EnglishAuction {
 
     function start() external {
         require(!started, "started");
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 
 }

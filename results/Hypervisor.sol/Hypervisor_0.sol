@@ -79,7 +79,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         string memory name,
         string memory symbol
     ) ERC20Permit(name) ERC20(name, symbol) {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(_owner != address(0));
         pool = IUniswapV3Pool(_pool);
         token0 = IERC20(pool.token0());

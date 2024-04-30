@@ -732,7 +732,7 @@ contract ve is IERC721, IERC721Metadata {
         // Check requirements
         bool senderIsOwner = (idToOwner[_tokenId] == msg.sender);
         bool senderIsApprovedForAll = (ownerToOperators[owner])[msg.sender];
-        <REQUIRE>
+        require(<FILL_ME>)
         // Set the approval
         idToApprovals[_tokenId] = _approved;
         emit Approval(owner, _approved, _tokenId);

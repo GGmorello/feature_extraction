@@ -534,7 +534,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         bytes calldata data
     ) external override {
         require(msg.sender == address(pool));
-        <REQUIRE>
+        require(<FILL_ME>)
         mintCalled = false;
 
         if (amount0 > 0) token0.safeTransfer(msg.sender, amount0);

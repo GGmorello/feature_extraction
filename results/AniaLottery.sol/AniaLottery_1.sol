@@ -58,7 +58,7 @@ contract AniaLottery {
     }
 
     modifier onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

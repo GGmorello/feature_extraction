@@ -91,7 +91,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @param _addresses are the Ethereum addresses to be whitelisted.
     function setWhitelist(address[] _addresses) external onlyOwner hasNoOwnerOrZeroAddress(_addresses) {
         // Require that the whitelist has not been initialized.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Add each of the provided addresses to the whitelist.
         for (uint i = 0; i < _addresses.length; i++) {
             // adds to the whitelist mapping

@@ -176,7 +176,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @dev Confirm pending removal of whitelisted addresses.
     function confirmWhitelistRemoval(bytes32 _hash) external onlyController {
         // Require that the pending whitelist is not empty and the operation has been submitted.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Require that confirmation hash and the hash of the pending whitelist removal match
         require(_hash == calculateHash(_pendingWhitelistRemoval), "hash of the pending whitelist removal does not match the confirmed hash");
         // Remove pending addresses.

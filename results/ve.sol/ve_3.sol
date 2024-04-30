@@ -726,7 +726,7 @@ contract ve is IERC721, IERC721Metadata {
     function approve(address _approved, uint _tokenId) public {
         address owner = idToOwner[_tokenId];
         // Throws if `_tokenId` is not a valid NFT
-        <REQUIRE>
+        require(<FILL_ME>)
         // Throws if `_approved` is the current owner
         require(_approved != owner);
         // Check requirements

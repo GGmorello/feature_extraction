@@ -124,7 +124,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         require(token != address(0), "queryID matches to address 0");
         // Get the corresponding token object.
         ( , , , bool available, , , uint256 lastUpdate) = _getTokenInfo(token);
-        <REQUIRE>
+        require(<FILL_ME>)
 
         bool valid;
         uint timestamp;

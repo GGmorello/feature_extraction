@@ -808,7 +808,7 @@ library SwapUtils {
      * @param newSwapFee new swap fee to be applied on future transactions
      */
     function setSwapFee(Swap storage self, uint256 newSwapFee) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         self.swapFee = newSwapFee;
     }
 

@@ -334,7 +334,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         require(minute < 60, "minute error");
 
         uint second = _parseIntScientific(date.split(timeDelimiter).toString());
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint timestamp = year * (10 ** 10) + month * (10 ** 8) + day * (10 ** 6) + hour * (10 ** 4) + minute * (10 ** 2) + second;
 

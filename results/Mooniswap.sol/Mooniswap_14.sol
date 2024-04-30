@@ -336,6 +336,6 @@ contract Mooniswap is MooniswapGovernance, Ownable {
 
         require(token0.uniBalanceOf(address(this)) >= balance0, "Mooniswap: access denied");
         require(token1.uniBalanceOf(address(this)) >= balance1, "Mooniswap: access denied");
-        <REQUIRE>
+        require(<FILL_ME>)
     }
 }

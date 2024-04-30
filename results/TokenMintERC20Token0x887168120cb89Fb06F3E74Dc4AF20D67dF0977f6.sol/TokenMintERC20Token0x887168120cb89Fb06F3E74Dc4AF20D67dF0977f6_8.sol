@@ -764,7 +764,7 @@ contract ERC20 is IERC20 {
 
     function _burn(address account, uint256 value) internal {
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
 

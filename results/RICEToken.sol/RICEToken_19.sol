@@ -737,7 +737,7 @@ contract Pausable is Context, PauserRole {
      * @dev Modifier to make a function callable only when the contract is paused.
      */
     modifier whenPaused() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

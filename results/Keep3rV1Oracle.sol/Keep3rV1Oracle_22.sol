@@ -491,7 +491,7 @@ contract Keep3rV1Oracle {
     address public pendingGovernance;
 
     function setMinKeep(uint _keep) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         minKeep = _keep;
     }
 

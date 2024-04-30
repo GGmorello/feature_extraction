@@ -182,7 +182,7 @@ contract AniaLottery {
 
     function lotteryDraw(uint projectId, address[] calldata users) external onlyAdmin {
         require(_checkProjectExistById(projectId), "Project with this ID does not exist.");
-        <REQUIRE>
+        require(<FILL_ME>)
         // We will check if the lottery is open
         require(!projects[projectId].draw, "The lottery has been already drawn.");
 

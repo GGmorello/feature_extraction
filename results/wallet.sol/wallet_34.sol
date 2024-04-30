@@ -667,7 +667,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
             _enforceLimit(_spendLimit, _value);
         }
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         emit ExecutedTransaction(_destination, _value, _data);
     }

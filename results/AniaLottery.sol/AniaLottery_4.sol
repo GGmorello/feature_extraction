@@ -131,7 +131,7 @@ contract AniaLottery {
     function addUsersToWhitelist(uint projectId, address[] calldata users, bool checkEndDate) external onlyAdmin {
 
         if(checkEndDate){
-            <REQUIRE>
+            require(<FILL_ME>)
         }
         // We will check if the whitelisting is open
         require(!projects[projectId].draw, "The lottery has been launched and project is completed close.");

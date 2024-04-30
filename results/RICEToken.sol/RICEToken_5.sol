@@ -390,7 +390,7 @@ contract ERC20 is Context, IERC20 {
      * - `sender` must have a balance of at least `amount`.
      */
     function _transfer(address sender, address recipient, uint256 amount) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");

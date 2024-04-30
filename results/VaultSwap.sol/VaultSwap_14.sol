@@ -556,7 +556,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
     }
     uint256 amount0In = balance0 > _reserve0 - amount0Out ? balance0 - (_reserve0 - amount0Out) : 0;
     uint256 amount1In = balance1 > _reserve1 - amount1Out ? balance1 - (_reserve1 - amount1Out) : 0;
-    <REQUIRE>
+    require(<FILL_ME>)
     {
       // scope for reserve{0,1}Adjusted, avoids stack too deep errors
       uint256 balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(2));

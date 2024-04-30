@@ -110,7 +110,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
         uint256[4] memory inMin
     ) nonReentrant external returns (uint256 shares) {
         require(deposit0 > 0 || deposit1 > 0);
-        <REQUIRE>
+        require(<FILL_ME>)
         require(to != address(0) && to != address(this), "to");
         require(msg.sender == whitelistedAddress, "WHE");
 

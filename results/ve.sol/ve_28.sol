@@ -1084,7 +1084,7 @@ contract ve is IERC721, IERC721Metadata {
         require(attachments[_tokenId] == 0 && !voted[_tokenId], "attached");
 
         LockedBalance memory _locked = locked[_tokenId];
-        <REQUIRE>
+        require(<FILL_ME>)
         uint value = uint(int256(_locked.amount));
 
         locked[_tokenId] = LockedBalance(0,0);

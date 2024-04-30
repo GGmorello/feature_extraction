@@ -133,7 +133,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
 
     function depositFor(uint256[2] memory maxAmounts, uint256[2] memory minAmounts, address target) public payable nonReentrant returns(uint256 fairSupply, uint256[2] memory receivedAmounts) {
         IERC20[2] memory _tokens = [token0, token1];
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 totalSupply = totalSupply();
 

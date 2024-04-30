@@ -34,7 +34,7 @@ import "./externals/ERC165.sol";
 contract ControllableOwnable is Controllable, Ownable {
     /// @dev Check if the sender is the Owner or one of the Controllers
     modifier onlyOwnerOrController() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 }

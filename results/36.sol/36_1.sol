@@ -58,7 +58,7 @@ abstract contract Ownable is Context {
      * Can only be called by the current owner.
      */
     function transferOwnership(address newOwner) public virtual onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _transferOwnership(newOwner);
     }
 

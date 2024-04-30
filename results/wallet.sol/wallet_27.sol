@@ -519,7 +519,7 @@ contract Vault is AddressWhitelist, SpendLimit, ERC165, TokenWhitelistable {
     /// @param _amount is the amount of assets to be transferred in base units.
     function transfer(address _to, address _asset, uint _amount) external onlyOwner isNotZero(_amount) {
         // Checks if the _to address is not the zero-address
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // If address is not whitelisted, take daily limit into account.
         if (!whitelistMap[_to]) {

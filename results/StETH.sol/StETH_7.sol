@@ -372,7 +372,7 @@ contract StETH is IERC20, Pausable {
      * - the contract must not be paused.
      */
     function _mintShares(address _recipient, uint256 _sharesAmount) internal whenNotStopped returns (uint256 newTotalShares) {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         newTotalShares = _getTotalShares().add(_sharesAmount);
         TOTAL_SHARES_POSITION.setStorageUint256(newTotalShares);

@@ -211,7 +211,7 @@ library ABDKMath64x64 {
             require(hi <= 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);
             hi <<= 64;
 
-            <REQUIRE>
+            require(<FILL_ME>)
             return hi + lo;
         }
     }

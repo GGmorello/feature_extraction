@@ -418,7 +418,7 @@ contract ve is IERC721, IERC721Metadata {
     uint8 internal constant _entered = 2;
     uint8 internal _entered_state = 1;
     modifier nonreentrant() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _entered_state = _entered;
         _;
         _entered_state = _not_entered;

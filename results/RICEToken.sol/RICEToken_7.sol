@@ -408,7 +408,7 @@ contract ERC20 is Context, IERC20 {
      * - `to` cannot be the zero address.
      */
     function _mint(address account, uint256 amount) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _totalSupply = _totalSupply.add(amount);
         _balances[account] = _balances[account].add(amount);

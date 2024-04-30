@@ -53,7 +53,7 @@ contract AniaLottery {
     }
 
     modifier onlyAdmin {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

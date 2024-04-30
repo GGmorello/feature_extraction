@@ -398,7 +398,7 @@ contract StETH is IERC20, Pausable {
      * - the contract must not be paused.
      */
     function _burnShares(address _account, uint256 _sharesAmount) internal whenNotStopped returns (uint256 newTotalShares) {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 accountShares = shares[_account];
         require(_sharesAmount <= accountShares, "BURN_AMOUNT_EXCEEDS_BALANCE");

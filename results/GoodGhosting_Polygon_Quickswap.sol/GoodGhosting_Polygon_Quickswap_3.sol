@@ -123,7 +123,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             _inboundCurrency.approve(address(router), MAX_ALLOWANCE),
             "Fail to approve allowance to router"
         );
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         require(

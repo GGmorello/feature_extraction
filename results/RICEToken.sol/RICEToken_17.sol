@@ -661,7 +661,7 @@ contract PauserRole is Context {
     }
 
     modifier onlyPauser() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

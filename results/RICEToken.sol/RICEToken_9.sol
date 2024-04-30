@@ -448,7 +448,7 @@ contract ERC20 is Context, IERC20 {
      * - `spender` cannot be the zero address.
      */
     function _approve(address owner, address spender, uint256 amount) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(spender != address(0), "ERC20: approve to the zero address");
 
         _allowances[owner][spender] = amount;

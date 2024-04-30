@@ -665,7 +665,7 @@ library SwapUtils {
         uint256[] memory amounts = calculateRebalanceAmounts(self, adjustedAmount);
 
         for (uint i = 0; i < amounts.length; i++) {
-            <REQUIRE>
+            require(<FILL_ME>)
 
             self.balances[i] = self.balances[i].sub(amounts[i]);
         }

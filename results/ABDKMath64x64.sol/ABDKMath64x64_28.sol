@@ -450,7 +450,7 @@ library ABDKMath64x64 {
                 absResult >>= 64 - resultShift;
             }
             int256 result = negative ? -int256(absResult) : int256(absResult);
-            <REQUIRE>
+            require(<FILL_ME>)
             return int128(result);
         }
     }

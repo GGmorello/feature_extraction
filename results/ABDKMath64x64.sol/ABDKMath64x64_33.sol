@@ -613,7 +613,7 @@ library ABDKMath64x64 {
             if (x & 0x1 > 0) result = (result * 0x10000000000000000B17217F7D1CF79AB) >> 128;
 
             result >>= uint256(int256(63 - (x >> 64)));
-            <REQUIRE>
+            require(<FILL_ME>)
 
             return int128(int256(result));
         }

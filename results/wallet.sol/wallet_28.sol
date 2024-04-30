@@ -535,7 +535,7 @@ contract Vault is AddressWhitelist, SpendLimit, ERC165, TokenWhitelistable {
         }
         // Transfer token or ether based on the provided address.
         if (_asset != address(0)) {
-            <REQUIRE>
+            require(<FILL_ME>)
         } else {
             _to.transfer(_amount);
         }

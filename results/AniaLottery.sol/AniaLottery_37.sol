@@ -331,7 +331,7 @@ contract AniaLottery {
 
         // We will get the winner and check if there is still reward available
         LotteryWinner memory winner = getLotteryWinner(projectId, msg.sender);
-        <REQUIRE>
+        require(<FILL_ME>)
 
         return true;
     }

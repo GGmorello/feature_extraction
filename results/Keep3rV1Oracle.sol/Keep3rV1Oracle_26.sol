@@ -557,7 +557,7 @@ contract Keep3rV1Oracle {
     function add(address tokenA, address tokenB) external {
         require(msg.sender == governance, "UniswapV2Oracle::add: !gov");
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
-        <REQUIRE>
+        require(<FILL_ME>)
         _known[pair] = true;
         _pairs.push(pair);
 

@@ -147,7 +147,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
        So to keep staking throught the game duration we need to update the staking contract so exit the position from the expired pool and staking into a new pool.
     */
     function updateStakingContract(IStake _stakingPool) external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(
             address(_stakingPool) != address(stakingPool),
             "Same Staking Pool Address"

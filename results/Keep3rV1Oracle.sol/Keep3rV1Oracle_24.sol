@@ -508,7 +508,7 @@ contract Keep3rV1Oracle {
      * @notice Allows pendingGovernance to accept their role as governance (protection pattern)
      */
     function acceptGovernance() external {
-        <REQUIRE>
+        require(<FILL_ME>)
         governance = pendingGovernance;
     }
 

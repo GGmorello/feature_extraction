@@ -535,7 +535,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
 
     function makeDeposit() external whenNotPaused {
         // only registered players can deposit
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(
             players[msg.sender].addr == msg.sender,

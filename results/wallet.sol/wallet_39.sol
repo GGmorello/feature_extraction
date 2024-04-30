@@ -742,7 +742,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
     /// @param _bts bytes
     /// @param _from start position
     function _bytesToAddress(bytes _bts, uint _from) private pure returns (address) {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint160 m = 0;
         uint160 b = 0;

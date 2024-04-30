@@ -1022,7 +1022,7 @@ contract ve is IERC721, IERC721Metadata {
 
         require(_value > 0); // dev: need non-zero value
         require(unlock_time > block.timestamp, 'Can only lock until time in the future');
-        <REQUIRE>
+        require(<FILL_ME>)
 
         ++tokenId;
         uint _tokenId = tokenId;

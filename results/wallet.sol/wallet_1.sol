@@ -65,7 +65,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @dev Check if the provided addresses contain the owner or the zero-address address.
     modifier hasNoOwnerOrZeroAddress(address[] _addresses) {
         for (uint i = 0; i < _addresses.length; i++) {
-            <REQUIRE>
+            require(<FILL_ME>)
             require(_addresses[i] != address(0), "provided whitelist contains the zero address");
         }
         _;

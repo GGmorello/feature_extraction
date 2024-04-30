@@ -619,7 +619,7 @@ contract WaultSwapFactory is IWaultSwapFactory {
   }
 
   function setFeeTo(address _feeTo) external {
-    <REQUIRE>
+    require(<FILL_ME>)
     feeTo = _feeTo;
   }
 

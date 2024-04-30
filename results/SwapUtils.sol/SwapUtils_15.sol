@@ -729,7 +729,7 @@ library SwapUtils {
     function removeLiquidityImbalance(
         Swap storage self, uint256[] memory amounts, uint256 maxBurnAmount
     ) public {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(maxBurnAmount <= self.lpToken.balanceOf(msg.sender) && maxBurnAmount != 0, ">LP.balanceOf");
 

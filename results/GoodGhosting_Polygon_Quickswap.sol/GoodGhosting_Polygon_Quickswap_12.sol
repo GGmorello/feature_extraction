@@ -282,7 +282,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
             "Cannot deposit into underlying protocol during segment zero"
         );
         uint256 amount = segmentDeposit[currentSegment.sub(1)];
-        <REQUIRE>
+        require(<FILL_ME>)
 
         // Sets deposited amount for previous segment to 0, avoiding double deposits into the protocol using funds from the current segment
         segmentDeposit[currentSegment.sub(1)] = 0;

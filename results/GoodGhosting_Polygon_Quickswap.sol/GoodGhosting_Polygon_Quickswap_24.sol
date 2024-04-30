@@ -498,7 +498,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         emit WinnersAnnouncement(winners);
 
         if (winners.length == 0) {
-            <REQUIRE>
+            require(<FILL_ME>)
 
         }
     }

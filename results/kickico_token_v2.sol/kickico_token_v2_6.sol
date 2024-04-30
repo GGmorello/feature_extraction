@@ -127,7 +127,7 @@ contract KickToken is AccountFrozenBalances {
     }
 
     modifier onlyOwner() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

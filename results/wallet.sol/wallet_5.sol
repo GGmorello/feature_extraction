@@ -108,7 +108,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @param _addresses are the Ethereum addresses to be whitelisted.
     function submitWhitelistAddition(address[] _addresses) external onlyOwner noActiveSubmission hasNoOwnerOrZeroAddress(_addresses) {
         // Require that the whitelist has been initialized.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Require this array of addresses not empty
         require(_addresses.length > 0, "pending whitelist addition is empty");
         // Set the provided addresses to the pending addition addresses.

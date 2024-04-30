@@ -806,7 +806,7 @@ contract ERC20 is IERC20 {
 
     function _approve(address owner, address spender, uint256 value) internal {
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(spender != address(0), "ERC20: approve to the zero address");
 

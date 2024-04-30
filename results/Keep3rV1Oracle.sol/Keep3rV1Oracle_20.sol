@@ -473,7 +473,7 @@ contract Keep3rV1Oracle {
     uint public minKeep = 200e18;
 
     modifier keeper() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

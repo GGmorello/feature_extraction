@@ -97,7 +97,7 @@ contract Gifto is ERC20Interface {
      * Only allow sale if _selling is on
      */
     modifier onSale() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
     

@@ -118,7 +118,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
     // solium-disable-next-line mixedcase
     function __callback(bytes32 _queryID, string _result, bytes _proof) public {
         // Require that the caller is the Oraclize contract.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Use the query ID to find the matching token address.
         address token = _queryToToken[_queryID];
         require(token != address(0), "queryID matches to address 0");

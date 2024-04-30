@@ -136,7 +136,7 @@ contract KickToken is AccountFrozenBalances {
     address public pendingOwner;
 
     modifier onlyPendingOwner() {
-    <REQUIRE>
+    require(<FILL_ME>)
         _;
     }
 

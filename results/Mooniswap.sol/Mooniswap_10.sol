@@ -220,7 +220,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
     }
 
     function swapFor(IERC20 src, IERC20 dst, uint256 amount, uint256 minReturn, address referral, address payable receiver) public payable nonReentrant returns(uint256 result) {
-        <REQUIRE>
+        require(<FILL_ME>)
 
         Balances memory balances = Balances({
             src: src.uniBalanceOf(address(this)).sub(src.isETH() ? msg.value : 0),

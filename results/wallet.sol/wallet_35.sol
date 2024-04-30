@@ -691,7 +691,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
             // Store the token in memory to save map entry lookup gas.
             (,uint256 magnitude, uint256 rate, bool available, , , ) = _getTokenInfo(_token);
             // require that token both exists in the whitelist and its rate is not zero.
-            <REQUIRE>
+            require(<FILL_ME>)
             require(rate != 0, "token rate is 0");
             // Safely convert the token amount to ether based on the exchange rate.
             _amount = _amount.mul(rate).div(magnitude);

@@ -539,7 +539,7 @@ library Roles {
      * @dev Remove an account's access to this role.
      */
     function remove(Role storage role, address account) internal {
-        <REQUIRE>
+        require(<FILL_ME>)
         role.bearer[account] = false;
     }
 

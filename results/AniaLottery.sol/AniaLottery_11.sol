@@ -237,7 +237,7 @@ contract AniaLottery {
 
     function setLotteryWinnerClaimedStatus(uint projectId, address userAddress) internal {
         uint256 index = projectWinnerIndex[projectId][userAddress];
-        <REQUIRE>
+        require(<FILL_ME>)
         lotteryWinners[projectId][index].claimed = true;
     }
 

@@ -247,7 +247,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
 
     function joinGame() external whenNotPaused {
         require(getCurrentSegment() == 0, "Game has already started");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         Player memory newPlayer = Player({
             addr: msg.sender,

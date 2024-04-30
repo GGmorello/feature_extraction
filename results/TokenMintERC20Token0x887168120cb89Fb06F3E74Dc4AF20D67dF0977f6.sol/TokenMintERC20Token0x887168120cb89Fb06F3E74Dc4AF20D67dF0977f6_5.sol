@@ -690,7 +690,7 @@ contract ERC20 is IERC20 {
 
     function _transfer(address sender, address recipient, uint256 amount) internal {
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         require(recipient != address(0), "ERC20: transfer to the zero address");
 

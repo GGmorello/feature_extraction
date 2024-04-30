@@ -71,7 +71,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     event EarlyWithdrawal(address indexed player, uint256 amount);
 
     modifier whenGameIsCompleted() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

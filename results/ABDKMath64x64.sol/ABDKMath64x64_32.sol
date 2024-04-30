@@ -541,7 +541,7 @@ library ABDKMath64x64 {
      */
     function exp_2(int128 x) internal pure returns (int128) {
         unchecked {
-            <REQUIRE> // Overflow
+            require(<FILL_ME>) // Overflow
 
             if (x < -0x400000000000000000) return 0; // Underflow
 

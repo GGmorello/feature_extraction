@@ -497,7 +497,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
     } else {
       liquidity = Math.min(amount0.mul(_totalSupply) / _reserve0, amount1.mul(_totalSupply) / _reserve1);
     }
-    <REQUIRE>
+    require(<FILL_ME>)
     _mint(to, liquidity);
 
     _update(balance0, balance1, _reserve0, _reserve1);

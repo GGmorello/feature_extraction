@@ -964,7 +964,7 @@ contract ve is IERC721, IERC721Metadata {
     }
 
     function attach(uint _tokenId) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         attachments[_tokenId] = attachments[_tokenId]+1;
     }
 

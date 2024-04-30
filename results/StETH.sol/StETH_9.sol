@@ -401,7 +401,7 @@ contract StETH is IERC20, Pausable {
         require(_account != address(0), "BURN_FROM_THE_ZERO_ADDRESS");
 
         uint256 accountShares = shares[_account];
-        <REQUIRE>
+        require(<FILL_ME>)
 
         newTotalShares = _getTotalShares().sub(_sharesAmount);
         TOTAL_SHARES_POSITION.setStorageUint256(newTotalShares);

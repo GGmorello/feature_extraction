@@ -568,7 +568,7 @@ library SwapUtils {
         uint256[] memory newBalances = self.balances;
 
         for (uint i = 0; i < self.pooledTokens.length; i++) {
-            <REQUIRE>
+            require(<FILL_ME>)
 
             newBalances[i] = self.balances[i].add(amounts[i]);
         }

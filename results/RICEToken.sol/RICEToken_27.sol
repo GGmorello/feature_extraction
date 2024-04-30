@@ -967,7 +967,7 @@ contract RICEToken is ERC20, ERC20Detailed, ERC20Capped, ERC20Pausable, ERC20Bur
         require(_from != address(0));
         require(_receiver != address(0));
         require(_amount <= allowance(_from, msg.sender));
-        <REQUIRE>
+        require(<FILL_ME>)
         return ERC20.transferFrom(_from, _receiver, _amount);
     }
 //SWC-Unexpected Ether Balance,SWC-DoS With Block Gas Limit:L974-984

@@ -122,7 +122,7 @@ contract KickToken is AccountFrozenBalances {
     }
 
     modifier onlyMelter() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

@@ -206,7 +206,7 @@ contract AddressWhitelist is ControllableOwnable {
         // Check if operation has been submitted.
         require(submittedWhitelistRemoval, "whitelist removal has not been submitted");
         // Require that confirmation hash and the hash of the pending whitelist removal match
-        <REQUIRE>
+        require(<FILL_ME>)
         // Reset pending addresses.
         delete _pendingWhitelistRemoval;
         // Reset pending addresses.

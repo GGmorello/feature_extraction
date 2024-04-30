@@ -246,7 +246,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     }
 
     function joinGame() external whenNotPaused {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(
             players[msg.sender].addr != msg.sender,
             "Cannot join the game more than once"

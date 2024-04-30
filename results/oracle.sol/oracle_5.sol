@@ -160,7 +160,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         //we are sure that ':' is included in the string, body now contains the rate+'}'
         jsonLen = body._len;
         body.until("}".toSlice());
-        <REQUIRE>
+        require(<FILL_ME>)
         //ensure that the json is properly terminated with a '}'
         return body.toString();
     }

@@ -556,7 +556,7 @@ contract Vault is AddressWhitelist, SpendLimit, ERC165, TokenWhitelistable {
         (,uint256 magnitude, uint256 rate, bool available, , , ) = _getTokenInfo(_token);
         // If the token exists require that its rate is not zero.
         if (available) {
-            <REQUIRE>
+            require(<FILL_ME>)
             // Safely convert the token amount to ether based on the exchange rate.
             // SWC-Integer Overflow and Underflow: L562
             return _amount.mul(rate).div(magnitude);

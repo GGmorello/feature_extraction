@@ -319,7 +319,7 @@ library ABDKMath64x64 {
         unchecked {
             require(x != 0);
             int256 result = int256(0x100000000000000000000000000000000) / x;
-            <REQUIRE>
+            require(<FILL_ME>)
             return int128(result);
         }
     }

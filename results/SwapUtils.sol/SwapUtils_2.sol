@@ -350,7 +350,7 @@ library SwapUtils {
         uint256[] memory xp
     ) internal view returns (uint256) {
         uint256 numTokens = self.pooledTokens.length;
-        <REQUIRE>
+        require(<FILL_ME>)
         require(
             tokenIndexFrom < numTokens && tokenIndexTo < numTokens,
             "Tokens must be in pool"

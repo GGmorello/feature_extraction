@@ -98,7 +98,7 @@ contract AniaLottery {
     function updateProject(uint projectId, string calldata projectName, uint raiseGoal, uint endDate, address contractAddress, address billingAddress, uint firstPayoutInPercent, uint256 tokenPrice) external onlyAdmin {
 
         // Each non-existent record returns 0
-        <REQUIRE>
+        require(<FILL_ME>)
 
         projects[projectId].name = projectName;
         projects[projectId].raiseGoal = raiseGoal;

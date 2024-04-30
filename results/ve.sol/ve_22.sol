@@ -1056,7 +1056,7 @@ contract ve is IERC721, IERC721Metadata {
 
         assert(_value > 0); // dev: need non-zero value
         require(_locked.amount > 0, 'No existing lock found');
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _deposit_for(_tokenId, _value, 0, _locked, DepositType.INCREASE_LOCK_AMOUNT);
     }

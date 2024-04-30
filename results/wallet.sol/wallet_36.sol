@@ -692,7 +692,7 @@ contract Wallet is ENSResolvable, Vault, GasTopUpLimit, LoadLimit {
             (,uint256 magnitude, uint256 rate, bool available, , , ) = _getTokenInfo(_token);
             // require that token both exists in the whitelist and its rate is not zero.
             require(available, "token is not available");
-            <REQUIRE>
+            require(<FILL_ME>)
             // Safely convert the token amount to ether based on the exchange rate.
             _amount = _amount.mul(rate).div(magnitude);
         }

@@ -667,7 +667,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
     }
 
     function transferOwnership(address newOwner) external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         owner = newOwner;
     }
 

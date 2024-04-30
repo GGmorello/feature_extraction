@@ -134,7 +134,7 @@ contract AniaLottery {
             require(_checkOpenProject(projectId), "Project is close.");
         }
         // We will check if the whitelisting is open
-        <REQUIRE>
+        require(<FILL_ME>)
         for (uint i; i < users.length; i++) {
             if(!_checkUserExistInProject(projectId, users[i])){
                 projectsWhitelist[projectId].push(

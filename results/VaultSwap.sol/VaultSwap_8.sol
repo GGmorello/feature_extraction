@@ -446,7 +446,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
     uint112 _reserve0,
     uint112 _reserve1
   ) private {
-    <REQUIRE>
+    require(<FILL_ME>)
     uint32 blockTimestamp = uint32(block.timestamp % 2**32);
     uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
     if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {

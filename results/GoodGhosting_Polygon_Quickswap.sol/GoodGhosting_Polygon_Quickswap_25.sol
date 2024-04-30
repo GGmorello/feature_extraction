@@ -508,7 +508,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
     // to be called by individual players to get the amount back once it is redeemed following the solidity withdraw pattern
     function withdraw(uint256 _slippage) external {
         Player storage player = players[msg.sender];
-        <REQUIRE>
+        require(<FILL_ME>)
         player.withdrawn = true;
 
         uint256 payout = player.amountPaid;

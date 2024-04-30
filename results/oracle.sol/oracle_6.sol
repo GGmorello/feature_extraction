@@ -219,7 +219,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
             for (uint i = 0; i < _tokenList.length; i++) {
                 //token must exist, revert if it doesn't
                 (string memory tokenSymbol, , , bool available , , , ) = _getTokenInfo(_tokenList[i]);
-                <REQUIRE>
+                require(<FILL_ME>)
                 // Store the token symbol used in the query.
                 strings.slice memory symbol = tokenSymbol.toSlice();
                 // Create a new oraclize query from the component strings.

@@ -603,7 +603,7 @@ library SwapUtils {
             toMint = D2.sub(D0).mul(self.lpToken.totalSupply()).div(D0);
         }
 
-        <REQUIRE>
+        require(<FILL_ME>)
 
         for (uint i = 0; i < self.pooledTokens.length; i++) {
             if (amounts[i] > 0) {

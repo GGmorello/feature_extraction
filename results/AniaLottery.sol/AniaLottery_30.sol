@@ -282,7 +282,7 @@ contract AniaLottery {
     // USER
     function signUpToWhitelist(uint projectId) external {
         // We will check if the whitelisting is open
-        <REQUIRE>
+        require(<FILL_ME>)
         // We will check if the user exists in the list
         require(!_checkUserExistInProject(projectId, msg.sender), "User is already in whitelist.");
         projectsWhitelist[projectId].push(

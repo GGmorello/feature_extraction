@@ -696,7 +696,7 @@ library SwapUtils {
         uint256 totalSupply = self.lpToken.totalSupply();
         uint256 numTokens = self.pooledTokens.length;
         require(tokenAmount <= self.lpToken.balanceOf(msg.sender), ">LP.balanceOf");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 dyFee = 0;
         uint256 dy = 0;

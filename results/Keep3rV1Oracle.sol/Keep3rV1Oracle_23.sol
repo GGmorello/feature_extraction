@@ -500,7 +500,7 @@ contract Keep3rV1Oracle {
      * @param _governance new governance address to set
      */
     function setGovernance(address _governance) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         pendingGovernance = _governance;
     }
 

@@ -203,7 +203,7 @@ library ABDKMath64x64 {
         unchecked {
             if (y == 0) return 0;
 
-            <REQUIRE>
+            require(<FILL_ME>)
 
             uint256 lo = (uint256(int256(x)) * (y & 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)) >> 64;
             uint256 hi = uint256(int256(x)) * (y >> 128);

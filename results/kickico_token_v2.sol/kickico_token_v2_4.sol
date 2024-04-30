@@ -107,7 +107,7 @@ contract KickToken is AccountFrozenBalances {
     }
 
     modifier onlyMinter() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

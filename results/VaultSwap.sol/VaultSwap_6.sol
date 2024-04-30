@@ -413,7 +413,7 @@ contract WaultSwapPair is IWaultSwapPair, WaultSwapERC20 {
     uint256 value
   ) private {
     (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
-    <REQUIRE>
+    require(<FILL_ME>)
   }
 
   event Mint(address indexed sender, uint256 amount0, uint256 amount1);

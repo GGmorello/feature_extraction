@@ -147,7 +147,7 @@ contract AddressWhitelist is ControllableOwnable {
     /// @dev Cancel pending whitelist addition.
     function cancelWhitelistAddition(bytes32 _hash) external onlyOwnerOrController {
         // Check if operation has been submitted.
-        <REQUIRE>
+        require(<FILL_ME>)
         // Require that confirmation hash and the hash of the pending whitelist addition match
         require(_hash == calculateHash(_pendingWhitelistAddition), "hash of the pending whitelist addition does not match");
         // Reset pending addresses.

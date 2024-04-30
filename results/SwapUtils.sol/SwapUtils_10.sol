@@ -653,7 +653,7 @@ library SwapUtils {
         Swap storage self, uint256 amount, uint256[] calldata minAmounts
     ) external {
         require(amount <= self.lpToken.balanceOf(msg.sender), ">LP.balanceOf");
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         uint256 adjustedAmount = amount

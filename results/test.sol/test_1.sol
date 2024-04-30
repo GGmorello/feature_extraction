@@ -780,7 +780,7 @@ contract FeedConsumer {
     function rate(address token) public returns (uint value, bool success) {
         // Permanently disable the mechanism if there are
         // more than 10 errors.
-        <REQUIRE>
+        require(<FILL_ME>)
         try feed.getData(token) returns (uint v) {
             return (v, true);
         } catch Error(string memory /*reason*/) {

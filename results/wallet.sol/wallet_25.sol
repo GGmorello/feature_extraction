@@ -492,7 +492,7 @@ contract Vault is AddressWhitelist, SpendLimit, ERC165, TokenWhitelistable {
 
     /// @dev Checks if the value is not zero.
     modifier isNotZero(uint _value) {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 

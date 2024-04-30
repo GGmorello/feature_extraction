@@ -90,7 +90,7 @@ contract Mooniswap is MooniswapGovernance, Ownable {
         ERC20(name, symbol)
         MooniswapGovernance(_mooniswapFactoryGovernance)
     {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(bytes(symbol).length > 0, "Mooniswap: symbol is empty");
         require(_token0 != _token1, "Mooniswap: duplicate tokens");
         token0 = _token0;

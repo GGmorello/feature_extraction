@@ -342,7 +342,7 @@ contract AniaLottery {
 
         // Payment must be greater than 0
         require(pay > 0, "You need to send some ether");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 tokensToBuy = decimals * (pay * decimals) / projects[projectId].tokenPrice * projects[projectId].firstPayoutInPercent / 100;
 

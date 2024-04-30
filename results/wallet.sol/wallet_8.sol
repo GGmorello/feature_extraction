@@ -126,7 +126,7 @@ contract AddressWhitelist is ControllableOwnable {
         // Require that the whitelist addition has been submitted.
         require(submittedWhitelistAddition, "whitelist addition has not been submitted");
         // Require that confirmation hash and the hash of the pending whitelist addition match
-        <REQUIRE>
+        require(<FILL_ME>)
         // Whitelist pending addresses.
         for (uint i = 0; i < _pendingWhitelistAddition.length; i++) {
             // check if it doesn't exist already.

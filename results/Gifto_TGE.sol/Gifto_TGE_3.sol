@@ -105,7 +105,7 @@ contract Gifto is ERC20Interface {
      * Functions with this modifier check the validity of address is investor
      */
     modifier validInvestor() {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
     

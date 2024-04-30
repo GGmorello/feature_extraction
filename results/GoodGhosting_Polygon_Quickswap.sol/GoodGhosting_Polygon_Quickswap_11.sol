@@ -277,7 +277,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         whenGameIsNotCompleted
     {
         uint256 currentSegment = getCurrentSegment();
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 amount = segmentDeposit[currentSegment.sub(1)];
         require(

@@ -326,7 +326,7 @@ contract AniaLottery {
         require(availableTokens > 0, "Insufficient tokens in contract");
 
         // We'll check to see if there are enough tokens to pay out in contract account
-        <REQUIRE>
+        require(<FILL_ME>)
         require(tokensToBuy < availableTokens, "Insufficient tokens in contract to send");
 
         // We will get the winner and check if there is still reward available

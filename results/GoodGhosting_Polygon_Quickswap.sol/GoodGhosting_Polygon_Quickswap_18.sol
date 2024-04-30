@@ -413,7 +413,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
                 require(amounts[0] > 0, "Output token amount is 0");
             }
         }
-        <REQUIRE>
+        require(<FILL_ME>)
 
     }
 

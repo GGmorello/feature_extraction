@@ -1154,7 +1154,7 @@ contract ve is IERC721, IERC721Metadata {
     /// @dev Returns current token URI metadata
     /// @param _tokenId Token ID to fetch URI for.
     function tokenURI(uint _tokenId) external view returns (string memory) {
-        <REQUIRE>
+        require(<FILL_ME>)
         LockedBalance memory _locked = locked[_tokenId];
         return
         _tokenURI(

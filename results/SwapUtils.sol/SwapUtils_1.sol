@@ -276,7 +276,7 @@ library SwapUtils {
         uint256[] memory precisionMultipliers
     ) internal pure returns (uint256[] memory) {
         uint256 numTokens = _balances.length;
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256[] memory xp = _balances;
         for (uint i = 0; i < numTokens; i++) {

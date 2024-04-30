@@ -149,7 +149,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
 
         uint jsonLen = abi.encodePacked(_json).length;
         //{"ETH":}.length = 8, assuming a (maximum of) 18 digit prevision
-        <REQUIRE>
+        require(<FILL_ME>)
 
         bytes memory jsonPrefix = new bytes(7);
         copyBytes(abi.encodePacked(_json), 0, 7, jsonPrefix, 0);

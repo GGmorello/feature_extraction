@@ -376,7 +376,7 @@ contract GasTopUpLimit is ControllableOwnable, DailyLimitTrait {
     /// @dev Sets the daily gas top up limit.
     /// @param _amount is the gas top up amount in wei.
     function setGasTopUpLimit(uint _amount) external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _setLimit(_gasTopUpLimit, _amount);
         emit SetGasTopUpLimit(msg.sender, _amount);
     }

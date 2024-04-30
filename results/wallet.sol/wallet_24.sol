@@ -435,7 +435,7 @@ contract LoadLimit is ControllableOwnable, DailyLimitTrait {
     /// @dev Submit a daily load limit update.
     /// @param _amount is the daily load limit amount in wei.
     function submitLoadLimitUpdate(uint _amount) external onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _submitLimitUpdate(_loadLimit, _amount);
         emit SubmittedLoadLimitUpdate(_amount);
     }

@@ -733,7 +733,7 @@ library SwapUtils {
             amounts.length == self.pooledTokens.length,
             "Amounts should correspond to pooled tokens"
         );
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint256 tokenSupply = self.lpToken.totalSupply();
         uint256 _fee = feePerToken(self);

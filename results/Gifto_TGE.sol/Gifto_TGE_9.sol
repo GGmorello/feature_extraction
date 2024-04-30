@@ -557,7 +557,7 @@ contract MultiSigWallet {
         onlyWallet
         validRequirement(owners.length, _required)
     {
-        <REQUIRE>
+        require(<FILL_ME>)
         RequirementChange(_required);
     }
 

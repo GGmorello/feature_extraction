@@ -325,7 +325,7 @@ contract Oracle is ENSResolvable, usingOraclize, Claimable, Base64, Date, Contro
         require(month > 0 && month < 13, "month error");
 
         uint year = _parseIntScientific(date.split(dateDelimiter).toString());
-        <REQUIRE>
+        require(<FILL_ME>)
 
         uint hour = _parseIntScientific(date.split(timeDelimiter).toString());
         require(hour < 25, "hour error");

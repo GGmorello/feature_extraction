@@ -259,7 +259,7 @@ library ABDKMath64x64 {
                 require(absoluteResult <= 0x80000000000000000000000000000000);
                 return -int128(absoluteResult); // We rely on overflow behavior here
             } else {
-                <REQUIRE>
+                require(<FILL_ME>)
                 return int128(absoluteResult); // We rely on overflow behavior here
             }
         }

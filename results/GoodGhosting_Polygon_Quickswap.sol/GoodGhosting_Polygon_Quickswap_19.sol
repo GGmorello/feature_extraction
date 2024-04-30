@@ -428,7 +428,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
         public
         whenGameIsCompleted
     {
-        <REQUIRE>
+        require(<FILL_ME>)
         redeemed = true;
         if (matoken.balanceOf(address(this)) > 0) {
             // claiming rewards and getting back the staked lp tokens

@@ -672,7 +672,7 @@ contract Hypervisor is IUniswapV3MintCallback, ERC20Permit, ReentrancyGuard {
     }
 
     modifier onlyOwner {
-        <REQUIRE>
+        require(<FILL_ME>)
         _;
     }
 }

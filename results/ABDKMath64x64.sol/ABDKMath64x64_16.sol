@@ -256,7 +256,7 @@ library ABDKMath64x64 {
             }
             uint128 absoluteResult = divuu(uint256(x), uint256(y));
             if (negativeResult) {
-                <REQUIRE>
+                require(<FILL_ME>)
                 return -int128(absoluteResult); // We rely on overflow behavior here
             } else {
                 require(absoluteResult <= 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF);

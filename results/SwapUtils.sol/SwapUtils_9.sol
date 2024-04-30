@@ -652,7 +652,7 @@ library SwapUtils {
     function removeLiquidity(
         Swap storage self, uint256 amount, uint256[] calldata minAmounts
     ) external {
-        <REQUIRE>
+        require(<FILL_ME>)
         require(
             minAmounts.length == self.pooledTokens.length,
             "Min amounts should correspond to pooled tokens"

@@ -619,7 +619,7 @@ contract ve is IERC721, IERC721Metadata {
     ) internal {
         require(attachments[_tokenId] == 0 && !voted[_tokenId], "attached");
         // Check requirements
-        <REQUIRE>
+        require(<FILL_ME>)
         // Clear approval. Throws if `_from` is not the current owner
         _clearApproval(_from, _tokenId);
         // Remove NFT. Throws if `_tokenId` is not a valid NFT

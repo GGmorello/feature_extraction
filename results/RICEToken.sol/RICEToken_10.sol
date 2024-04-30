@@ -449,7 +449,7 @@ contract ERC20 is Context, IERC20 {
      */
     function _approve(address owner, address spender, uint256 amount) internal {
         require(owner != address(0), "ERC20: approve from the zero address");
-        <REQUIRE>
+        require(<FILL_ME>)
 
         _allowances[owner][spender] = amount;
         emit Approval(owner, spender, amount);

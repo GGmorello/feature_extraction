@@ -162,7 +162,7 @@ contract GoodGhostingPolygonQuickswap is Ownable, Pausable {
 
     function _transferDaiToContract() internal {
         // users pays mtoken in to the smart contract, which he pre-approved to spend the mtoken for them
-        <REQUIRE>
+        require(<FILL_ME>)
 
 
         uint256 currentSegment = getCurrentSegment();

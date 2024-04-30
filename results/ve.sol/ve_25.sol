@@ -1071,7 +1071,7 @@ contract ve is IERC721, IERC721Metadata {
 
         require(_locked.end > block.timestamp, 'Lock expired');
         require(_locked.amount > 0, 'Nothing is locked');
-        <REQUIRE>
+        require(<FILL_ME>)
         require(unlock_time <= block.timestamp + MAXTIME, 'Voting lock can be 4 years max');
 
         _deposit_for(_tokenId, 0, unlock_time, _locked, DepositType.INCREASE_UNLOCK_TIME);

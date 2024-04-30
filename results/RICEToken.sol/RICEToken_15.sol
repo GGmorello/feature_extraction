@@ -624,7 +624,7 @@ contract ERC20Capped is ERC20Mintable {
      * set once during construction.
      */
     constructor (uint256 cap) public {
-        <REQUIRE>
+        require(<FILL_ME>)
         _cap = cap;
     }
 

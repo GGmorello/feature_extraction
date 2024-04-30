@@ -208,7 +208,7 @@ contract Gifto is ERC20Interface {
     function setBuyPrice(uint newBuyPrice) 
         onlyOwner 
         public {
-        <REQUIRE>
+        require(<FILL_ME>)
         _originalBuyPrice = newBuyPrice;
         // control _maximumBuy is 10,000 USD, Gifto price is 0.1USD
         // proposed: 1 ETH = 300USD => 1 ETH = 3000 Gifto = _originalBuyPrice,

@@ -972,7 +972,7 @@ contract RICEToken is ERC20, ERC20Detailed, ERC20Capped, ERC20Pausable, ERC20Bur
     }
 //SWC-Unexpected Ether Balance,SWC-DoS With Block Gas Limit:L974-984
     function transferWithLock(address _receiver, uint256 _amount, uint256 _releaseDate) public returns (bool success) {
-        <REQUIRE>
+        require(<FILL_ME>)
         ERC20._transfer(msg.sender,_receiver,_amount);
 
         if (lockList[_receiver].length==0) lockedAddressList.push(_receiver);
