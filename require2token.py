@@ -12,30 +12,58 @@ class RequireVisitor(SolidityVisitor):
         self.locations = []
         self.current_contract = None
         self.current_function = None
+        self.current_block = None
+        self.blocks = []
+
+    def visitBlock(self, ctx: SolidityParser.BlockContext):
+        block = (ctx.start.line, ctx.start.column, ctx.stop.line, ctx.stop.column)
+
+        if self.check_nested(block):
+            pass
+        else:
+            self.current_block = block
+            self.blocks += [{
+                'start_line': ctx.start.line,
+                'start_column': ctx.start.column,
+                'end_line': ctx.stop.line,
+                'end_column': ctx.stop.column,
+            }]        
+        return self.visitChildren(ctx)
     
-    def visitChildren(self, node):
-        if 'require' not in node.getText():
-            return
-        return super().visitChildren(node)
+    def check_nested(self, block):
+        if self.current_block:
+            if block[0] > self.current_block[0]:
+                if block[2] < self.current_block[2]:
+                    return True
+                if block[2] == self.current_block[2] and block[3] < self.current_block[3]:
+                    return True
+            if block[0] == self.current_block[0] and block[1] > self.current_block[1]:
+                if block[2] < self.current_block[2]:
+                    return True
+                if block[2] == self.current_block[2] and block[3] < self.current_block[3]:
+                    return True
+
+        return False
+
+    
+    def visitContractDefinition(self, ctx: SolidityParser.ContractDefinitionContext):
+        self.current_contract = (ctx.start.line, ctx.stop.line)
+
+        return self.visitChildren(ctx)
+    
         
     def visitFunctionDefinition(self, ctx:SolidityParser.FunctionDefinitionContext):
-        if 'require' not in ctx.getText():
-            return
+
         self.current_function = (ctx.start.line, ctx.stop.line)
         return super().visitFunctionDefinition(ctx)
+
     
     def visitModifierDefinition(self, ctx: SolidityParser.ModifierDefinitionContext):
-        if 'require' not in ctx.getText():
-            return
+
         self.current_function = (ctx.start.line, ctx.stop.line)
 
         return super().visitModifierDefinition(ctx)
-    
-    def visitContractDefinition(self, ctx: SolidityParser.ContractDefinitionContext):
-        if 'require' not in ctx.getText():
-            return
-        self.current_contract = (ctx.start.line, ctx.stop.line)
-        return super().visitContractDefinition(ctx)
+
 
     def visitExpressionStatement(self, ctx:SolidityParser.ExpressionStatementContext):
         text = ctx.getText()
@@ -65,8 +93,16 @@ class RequireVisitor(SolidityVisitor):
                 'function': {
                     'start_line': self.current_function[0],
                     'end_line': self.current_function[1]
+                },
+                'block': {
+                    'start_line': self.current_block[0],
+                    'start_column': self.current_block[1],
+                    'end_line': self.current_block[2],
+                    'end_column': self.current_block[3]
                 }
             })
+
+
 
 def parse(text):
     if not text:
@@ -81,38 +117,96 @@ def parse(text):
     visitor.visit(tree)    
 
 
-    return visitor.locations
+    return visitor.locations, visitor.blocks
 
-def change_require_statements(file_path, result_folder, token):
+
+def abstract_context_requires(file_path, result_folder, token):
     Path(result_folder).mkdir(parents=True, exist_ok=True)
+    print(file_path)
 
     with open(file_path, 'r', encoding="utf-8") as f:
         text = f.read()
-        locations = parse(text)
+        locations, blocks = parse(text)
+
+    abstract = create_abstracts(blocks, text)
 
     for i, location in enumerate(locations):
-        # for every location replace the text at the given location with the token and write the new file to the result folder
-        # start_line, start_column, end_line, end_column, _, _, _ = location
-        start_line = location['require']['start_line']
-        start_column = location['require']['start_column']
-        end_line = location['require']['end_line']
-        end_column = location['require']['end_column']
+        # rewrite block in abstract
+        
+        context = rewrite_block(location['block'], text, abstract)
 
-        lines = text.split('\n')
-        if start_line == end_line:
-            lines[start_line - 1] = lines[start_line - 1][:start_column] + token + lines[start_line - 1][end_column + 1:]
-        else:
-            lines[start_line - 1] = lines[start_line - 1][:start_column] + token
-            lines[end_line - 1] = lines[end_line - 1][end_column + 1:]
-            del lines[start_line:end_line-1]
+        infilled = change_requirement_statement(location, token, text, context)
+
 
         with open(os.path.join(result_folder, file_path.split('/')[-1][:-4] + f'_{i}.sol' ), 'w', encoding="utf-8", ) as f:
-            f.write('\n'.join(lines))
-        with open(os.path.join(result_folder, file_path.split('/')[-1][:-4] + f'_{i}_contract.sol' ), 'w', encoding="utf-8", ) as f:
-            f.write('\n'.join(lines[location['contract']['start_line']-1:location['contract']['end_line']]))
-        with open(os.path.join(result_folder, file_path.split('/')[-1][:-4] + f'_{i}_function.sol' ), 'w', encoding="utf-8", ) as f:
-            f.write('\n'.join(lines[location['function']['start_line']-1:location['function']['end_line']]))
-    return
+            f.write(infilled)
+    
+    with open(os.path.join(result_folder, file_path.split('/')[-1][:-4] + '_abstract.sol' ), 'w', encoding="utf-8", ) as f:
+        f.write(abstract)
+    with open(os.path.join(result_folder, file_path.split('/')[-1][:-4] + '_original.sol' ), 'w', encoding="utf-8", ) as f:
+        f.write(text)
+
+
+def create_abstracts(blocks, text):
+    lines = text.split('\n')
+
+    for block in blocks:
+        start_line = block['start_line'] - 1
+        start_column = block['start_column'] + 1
+        end_line = block['end_line'] - 1
+        end_column = block['end_column']
+    
+        if start_line == end_line:
+            lines[start_line ] = lines[start_line][:start_column] + ' ' * (end_column - start_column) + lines[start_line][end_column:]
+        else:
+            lines[start_line] = lines[start_line].replace(lines[start_line][start_column:], ' ' * len(lines[start_line ][start_column:]))
+            lines[end_line] = lines[end_line].replace(lines[end_line][:end_column], ' ' * len(lines[end_line][:end_column]))
+            lines[start_line + 1:end_line] = [' ' * len(line) for line in lines[start_line + 1:end_line]]
+
+    return '\n'.join(lines)
+
+
+def rewrite_block(block, original_text, abstract):
+    start_line = block['start_line'] - 1
+    start_column = block['start_column']
+    end_line = block['end_line']
+    end_column = block['end_column']
+
+    abs_lines = abstract.split('\n')
+    org_lines = original_text.split('\n')
+
+    if start_line == end_line:
+        abs_lines[start_line ] = abs_lines[start_line][:start_column] + org_lines[start_column:end_column] + abs_lines[start_line][end_column:]
+    else:
+        abs_lines[start_line] = abs_lines[start_line].replace(abs_lines[start_line][start_column:], org_lines[start_line][start_column:])
+        abs_lines[end_line] = abs_lines[end_line].replace(abs_lines[end_line][:end_column], org_lines[end_line][:end_column])
+        abs_lines[start_line:end_line] = org_lines[start_line:end_line]
+
+    return '\n'.join(abs_lines)
+
+
+
+def change_requirement_statement(location, token, original_text, abstract):
+    start_line = location['require']['start_line']
+    start_column = location['require']['start_column']
+    end_line = location['require']['end_line']
+    end_column = location['require']['end_column']
+
+    abs_lines = abstract.split('\n')
+    org_lines = original_text.split('\n')
+
+    if start_line == end_line:
+        abs_lines[start_line - 1] = org_lines[start_line - 1][:start_column] + token + org_lines[start_line - 1][end_column + 1:]
+    else:
+        abs_lines[start_line - 1] = org_lines[start_line - 1][:start_column] + token
+        abs_lines[start_line:end_line-1] = ['' for _ in range(start_line, end_line - 1)]
+        abs_lines[end_line - 1] = org_lines[end_line - 1][end_column + 1:]
+
+    non_empty_lines = [line for line in abs_lines if line.strip() != '']
+    
+    return '\n'.join(non_empty_lines)
+        
+        
 
 def change_require_statements_string(text, token):
     locations = parse(text)
@@ -134,7 +228,7 @@ def change_require_statements_string(text, token):
 def main():
     for f in tqdm(os.listdir("/Users/gabrielemorello/Code/FLAMES/feature_extraction/sources")):
         if f.endswith(".sol"):
-            change_require_statements(f"/Users/gabrielemorello/Code/FLAMES/feature_extraction/sources/{f}", f"./results/{f}/", "require(<FILL_ME>)")
+            abstract_context_requires(f"/Users/gabrielemorello/Code/FLAMES/feature_extraction/sources/{f}", f"./results/{f}/", "require(<FILL_ME>);")
 
 if __name__ == "__main__":
     main()
